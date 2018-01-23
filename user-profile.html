@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>PRISM - Bootstrap Admin Template</title>
+ 
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+ 
+<script src="js/demo-rtl.js"></script>
+ 
+ 
+<link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+ 
+<link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+ 
+<link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
+ 
+<link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+ 
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+<div id="theme-wrapper">
+<header class="navbar" id="header-navbar">
+<div class="container">
+<a href="index.html" id="logo" class="navbar-brand">
+<img src="img/logo.png" alt="" class="normal-logo logo-white"/>
+<img src="img/logo-black.png" alt="" class="normal-logo logo-black"/>
+<img src="img/logo-small.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+</a>
+<div class="clearfix">
+<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="fa fa-bars"></span>
+</button>
+<div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+<ul class="nav navbar-nav pull-left">
+<li>
+<a class="btn" id="make-small-nav">
+<i class="fa fa-bars"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="nav-no-collapse pull-right" id="header-nav">
+<ul class="nav navbar-nav pull-right">
+<li class="mobile-search">
+<a class="btn">
+<i class="fa fa-search"></i>
+</a>
+<div class="drowdown-search">
+<form role="search">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search...">
+<i class="fa fa-search nav-search-icon"></i>
+</div>
+</form>
+</div>
+</li>
+
+
+
+<li class="dropdown hidden-xs">
+<a class="btn dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-tasks"></i>
+<span class="count">5</span>
+</a>
+<ul class="dropdown-menu notifications-list">
+<li class="pointer">
+<div class="pointer-inner">
+<div class="arrow"></div>
+</div>
+</li>
+
+<li class="item-header">You have 5 pending tasks</li>
+<li class="item">
+	<a href="#">
+		<div class="task-info">
+			<div class="desc">Dashboard v1.3 <span class="pull-right">40%</span></div>
+		</div>
+		<div class="progress progress-striped">
+			<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+				<span class="sr-only">40% Complete (success)</span>
+			</div>
+		</div>
+	</a>
+</li>
+<li class="item">
+	<a href="#">
+		<div class="task-info">
+			<div class="desc">Database Update <span class="pull-right">60%</span></div>
+		</div>
+		<div class="progress progress-striped">
+			<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				<span class="sr-only">60% Complete (warning)</span>
+			</div>
+		</div>
+	</a>
+</li>
+<li class="item">
+	<a href="#">
+		<div class="task-info">
+			<div class="desc">Iphone Development <span class="pull-right">87%</span></div>
+		</div>
+		<div class="progress progress-striped">
+			<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 87%">
+				<span class="sr-only">87% Complete</span>
+			</div>
+		</div>
+	</a>
+</li>
+<li class="item">
+	<a href="#">
+		<div class="task-info">
+			<div class="desc">Mobile App <span class="pull-right">33%</span></div>
+		</div>
+		<div class="progress progress-striped">
+			<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
+				<span class="sr-only">33% Complete (danger)</span>
+			</div>
+		</div>
+	</a>
+</li>
+<li class="item">
+   <a href="#">
+		<div class="task-info">
+			<div class="desc">Dashboard v1.3 <span class="pull-right">45%</span></div>
+		</div>
+		<div class="progress progress-striped active">
+			<div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+				<span class="sr-only">45% Complete</span>
+			</div>
+		</div>
+	</a>
+</li>
+<li class="item-footer">
+<a href="#">
+View all tasks
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<a class="btn dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-bell"></i>
+<span class="count">8</span>
+</a>
+<ul class="dropdown-menu notifications-list">
+<li class="pointer">
+<div class="pointer-inner">
+<div class="arrow"></div>
+</div>
+</li>
+<li class="item-header">You have 6 new notifications</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-comment"></i>
+<span class="content">New comment on ‘Awesome P...</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-plus"></i>
+<span class="content">New user registration</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-envelope"></i>
+<span class="content">New Message from George</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-shopping-cart"></i>
+<span class="content">New purchase</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item">
+<a href="#">
+<i class="fa fa-eye"></i>
+<span class="content">New order</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+<li class="item-footer">
+<a href="#">
+View all notifications
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown hidden-xs">
+<a class="btn dropdown-toggle" data-toggle="dropdown">
+<i class="fa fa-envelope-o"></i>
+<span class="count">16</span>
+</a>
+<ul class="dropdown-menu notifications-list messages-list">
+<li class="pointer">
+<div class="pointer-inner">
+<div class="arrow"></div>
+</div>
+</li>
+<li class="item first-item">
+<a href="#">
+<img src="img/samples/messages-photo-1.png" alt=""/>
+<span class="content">
+<span class="content-headline">
+George Clooney
+</span>
+
+</span>
+<span class="time"><i class="fa fa-clock-o"></i>13 min.</span>
+</a>
+</li>
+
+
+<li class="item-footer">
+<a href="#">
+View all messages
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown profile-dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<img src="img/samples/mayank.jpg" alt=""/>
+<span class="hidden-xs">Mayank Tripathi</span> <b class="caret"></b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>
+<li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+<li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+<li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+</ul>
+</li>
+<li class="dropdown language hidden-xs">
+<a class="btn dropdown-toggle" data-toggle="dropdown">
+English
+<i class="fa fa-caret-down"></i>
+</a>
+<ul class="dropdown-menu">
+<li class="item">
+<a href="#">
+Spanish
+</a>
+</li>
+<li class="item">
+<a href="#">
+German
+</a>
+</li>
+<li class="item">
+<a href="#">
+Italian
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div id="page-wrapper" class="container">
+<div class="row">
+<div id="nav-col">
+<section id="col-left" class="col-left-nano">
+<div id="col-left-inner" class="col-left-nano-content">
+<div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
+<img alt="" src="img/samples/mayank.jpg"/>
+<div class="user-box">
+<span class="name">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+Mayank Tripathi
+<i class="fa fa-angle-down"></i>
+</a>
+<ul class="dropdown-menu">
+<li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>
+<li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+<li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+<li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+</ul>
+</span>
+<span class="status">
+<i class="fa fa-circle"></i> Online
+</span>
+</div>
+</div>
+<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+<ul class="nav nav-pills nav-stacked">
+<li class="nav-header nav-header-first hidden-sm hidden-xs">
+Navigation
+</li>
+<li>
+<a href="index.html">
+<i class="fa fa-dashboard"></i>
+<span>Dashboard</span>
+<span class="label label-primary label-circle pull-right">23</span>
+</a>
+</li>
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-user"></i>
+<span>Profile</span>
+<i class="fa fa-angle-right drop-icon"></i>
+</a>
+<ul class="submenu">
+<li>
+<a href="user-profile.html">
+View Profile
+</a>
+</li>
+<li>
+<a href="x-editable.html">
+Edit Profile
+</a>
+</li>
+<li>
+<a href="users.html">
+Change Password
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-file"></i>
+<span>Curriculum Vitae</span>
+<i class="fa fa-angle-right drop-icon"></i>
+</a>
+<ul class="submenu">
+<li>
+<a href="email-inbox.html">
+View CV
+</a>
+</li>
+<li>
+<a href="email-detail.html">
+Edit CV
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-bar-chart-o"></i>
+<span>Placement Statistics</span>
+<i class="fa fa-angle-right drop-icon"></i>
+</a>
+<ul class="submenu">
+<li>
+<a href="graphs-morris.html">
+Branch Wise
+</a>
+</li>
+<li>
+<a href="graphs-flot.html">
+Company Wise
+</a>
+</li>
+<li>
+<a href="graphs-dygraphs.html">
+Placed Students
+</a>
+</li>
+<li>
+<a href="graphs-xcharts.html">
+Search Any Students
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#" class="dropdown-toggle">
+<i class="fa fa-cubes"></i>
+<span>Companies</span>
+<i class="fa fa-angle-right drop-icon"></i>
+</a>
+<ul class="submenu">
+<li>
+<a href="graphs-morris.html">
+Company Search
+</a>
+</li>
+<li>
+<a href="graphs-flot.html">
+Pre Registration
+</a>
+</li>
+</a>
+</ul>
+</li>
+<li>
+<a href="my_batch.html">
+<i class="fa fa-users"></i>
+<span>My Batch</span>
+</a>
+</li>
+<li class="nav-header hidden-sm hidden-xs">
+Components
+</li>
+<li>
+<a href="Feedback.html">
+<i class="fa fa-comments"></i>
+<span>Feedback</span>
+</a>
+</li>
+<li>
+<a href="contact.html">
+<i class="fa fa-envelope"></i>
+<span>Contact Us</span>
+</a>
+</li>
+<li>
+<a href="maps.html">
+<i class="fa fa-map-marker"></i>
+<span>Google Maps</span>
+</a>
+</li>
+<li>
+<a href="about_us.html">
+<i class="fa fa-info"></i>
+<span>About Us</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<div id="nav-col-submenu"></div>
+</div>
+<div id="content-wrapper">
+<div class="row">
+<div class="col-lg-12">
+<div class="row">
+<div class="col-lg-12">
+<ol class="breadcrumb">
+<li><a href="#">Home</a></li>
+<li><a href="#">Users</a></li>
+<li class="active"><span>User Profile</span></li>
+</ol>
+<h1>User Profile</h1>
+</div>
+</div>
+<div class="row" id="user-profile">
+<div class="col-lg-3 col-md-4 col-sm-4">
+<div class="main-box clearfix">
+<header class="main-box-header clearfix">
+<h2>Mayank Tripathi</h2>
+</header>
+<div class="main-box-body clearfix">
+<div class="profile-status">
+<i class="fa fa-circle"></i> Online
+</div>
+<img src="img/samples/mayank.jpg" alt="" class="profile-img img-responsive center-block"/>
+
+
+<div class="profile-details">
+<ul class="fa-ul">
+<li><i class="fa-li fa fa-graduation-cap"></i>M.C.A.</li>
+<li><i class="fa-li fa fa-calendar"></i>2016-2019</li>
+<li><i class="fa-li fa fa-university"></i>NITK Surathkal</li>
+</ul>
+</div>
+<div class="profile-message-btn center-block text-center">
+<a href="#" class="btn btn-success">
+<i class="fa fa-pencil-square"></i>
+Edit Profile
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-9 col-md-8 col-sm-8">
+<div class="main-box clearfix">
+<div class="tabs-wrapper profile-tabs">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab-newsfeed" data-toggle="tab">Personal</a></li>
+<li><a href="#tab-activity" data-toggle="tab">Academics</a></li>
+<li><a href="#tab-friends" data-toggle="tab">Additional</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade in active" id="tab-newsfeed">
+<div id="newsfeed">
+<div class="story">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+            <th>Branch</th>
+
+        <td class="wd2">M C A : Mathematical and Computational Sciences&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Father's Name</th>
+
+        <td class="wd2">Shiv Shankar Tripathi&nbsp;&nbsp;
+              <i class="fa fa-user"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Roll Number</th>
+
+        <td class="wd2">16CA41&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Date of birth</th>
+
+        <td class="wd2">01-07-1996&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Mess Roll Number</th>
+
+        <td class="wd2">3028&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Date of Admission</th>
+
+        <td class="wd2">14-07-2016&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Aadhaar Number</th>
+
+        <td class="wd2">5430-3911-3353&nbsp;&nbsp;
+              <i class="fa fa-hashtag"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Gender</th>
+
+        <td class="wd2">Male&nbsp;&nbsp;
+              <i class="fa fa-venus-mars"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Blood Group</th>
+
+        <td class="wd2">A+&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Category</th>
+
+        <td class="wd2">General&nbsp;&nbsp;
+              <i class="fa fa-tags"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Nationality</th>
+
+        <td class="wd2">India&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <tbody><tr class="noborder">
+            <th>Hostel Room</th>
+
+        <td class="wd2">Block VIII - Room No 218&nbsp;&nbsp;
+              <i class="fa fa-building"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+          </tr>
+        </tbody></table>
+      </div>
+    </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <tbody><tr>
+            <th>Permanent Address</th>
+
+        <td class="wd2">W-S/33 work charge colony Rajghat, Lalitpur U.P <br><br>Lalitpur<br>Uttar Pradesh&nbsp;&nbsp;
+              <i class="fa fa-map-marker"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+    </tr></tbody></table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Pincode</th>
+
+        <td class="wd2">284501&nbsp;&nbsp;
+              <i class="fa fa-cog"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Country</th>
+
+        <td class="wd2">India&nbsp;&nbsp;
+              <i class="fa fa-globe"></i>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Phone</th>
+
+        <td class="wd2">7697416733&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+  <div class="col-md-6 col-sm-12 col-xs-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Alternate Phone</th>
+
+        <td class="wd2">9936714650 &nbsp;&nbsp;
+              <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <tbody><tr>
+        <th>Email address</th>
+
+        <td class="wd2">jonty.shashank@gmail.com&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+    </td>
+<style>
+    .wd2{
+        text-align: right;
+    }
+</style>
+      </tr>
+    </tbody></table>
+  </div>
+</div>
+
+              </div>
+</div>
+
+</div>
+</div>
+<div class="tab-pane fade" id="tab-activity">
+<div class="table-responsive">
+
+
+
+</div>
+</div>
+
+
+<div class="tab-pane clearfix fade" id="tab-friends">
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer-bar" class="row">
+<p id="footer-copyright" class="col-xs-12">
+Powered by PRISM Theme.
+</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<div id="config-tool" class="closed">
+<a id="config-tool-cog">
+<i class="fa fa-cog"></i>
+</a>
+<div id="config-tool-options">
+<h4>Layout Options</h4>
+<ul>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-fixed-header"/>
+<label for="config-fixed-header">
+Fixed Header
+</label>
+</div>
+</li>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-fixed-sidebar"/>
+<label for="config-fixed-sidebar">
+Fixed Left Menu
+</label>
+</div>
+</li>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-fixed-footer"/>
+<label for="config-fixed-footer">
+Fixed Footer
+</label>
+</div>
+</li>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-boxed-layout"/>
+<label for="config-boxed-layout">
+Boxed Layout
+</label>
+</div>
+</li>
+<li>
+<div class="checkbox-nice">
+<input type="checkbox" id="config-rtl-layout"/>
+<label for="config-rtl-layout">
+Right-to-Left
+</label>
+</div>
+</li>
+</ul>
+<br/>
+<h4>Skin Color</h4>
+<ul id="skin-colors" class="clearfix">
+<li>
+<a class="skin-changer" data-skin="theme-navyBlue" data-toggle="tooltip" title="Navy Blue" style="background-color: #34495e;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="White/Green" style="background-color: #2ecc71;">
+</a>
+</li>
+<li>
+<a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="Gradient">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-greenSea" data-toggle="tooltip" title="Green Sea" style="background-color: #6ff3ad;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="Amethyst" style="background-color: #9b59b6;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="Blue" style="background-color: #7FC8BA;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red" style="background-color: #e74c3c;">
+</a>
+</li>
+<li>
+<a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="White/Blue" style="background-color: #1ABC9C;">
+</a>
+</li>
+</ul>
+</div>
+</div>
+ 
+<script src="js/demo-skin-changer.js"></script>  
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.nanoscroller.min.js"></script>
+<script src="js/demo.js"></script>  
+ 
+<script src="js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+ 
+<script src="js/scripts.js"></script>
+<script src="js/pace.min.js"></script>
+ 
+<script type="text/javascript">
+	    // When the window has finished loading create our google map below
+	    google.maps.event.addDomListener(window, 'load', init);
+	    
+	    function init() {
+	    	var latlng = new google.maps.LatLng(40.763986, -73.958674);
+	    	
+	        //APPLE MAP
+	        var mapOptionsApple = {
+	            zoom: 12,
+	            scrollwheel: false,
+	            center: latlng,
+	
+	            // How you would like to style the map. 
+	            // This is where you would paste any style found on Snazzy Maps.
+	            styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]}]
+	        };
+	
+	        var mapElementApple = document.getElementById('map-apple');
+	
+	        // Create the Google Map using out element and options defined above
+	        var mapApple = new google.maps.Map(mapElementApple, mapOptionsApple);
+	        
+	        var markerApple = new google.maps.Marker({
+	    		position: latlng,
+	    		map: mapApple
+	    	});
+	    }
+	    
+		$(document).ready(function() {
+			$('.conversation-inner').slimScroll({
+		        height: '340px'
+		    });
+		});
+		
+		$(function() {
+			$(document).ready(function() {
+				$('#newsfeed .story-images').magnificPopup({
+					type: 'image',
+					delegate: 'a',
+					gallery: {
+						enabled: true
+				    }
+				});
+			});
+		});
+	
+	</script>
+</body>
+</html>
