@@ -1,0 +1,22 @@
+.user-profile-form-wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.up-form{
+	padding:0 20px;
+}
+.up-form-control{
+	display: flex;
+	justify-content:center;
+}
+.up-form-control input{
+	margin:0 10px;
+	border-radius: 16px;
+    padding: 8px 30px;
+    background-color: #7fc8ba;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 0px 15px -3px #555;
+}
