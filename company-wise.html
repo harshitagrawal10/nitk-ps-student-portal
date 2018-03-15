@@ -16,24 +16,22 @@
  
 <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
  
-<link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
- 
+<link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/weather-icons.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/morris.css" type="text/css"/>
 <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
  
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
 	<![endif]-->
-  <style>
-  .fstyle
-  {
-    font-size:12px;color:#666666;
-  }
-  </style>
 
+	
 </head>
 <body>
+
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
@@ -73,6 +71,7 @@ Upload Profile Picture
 </div> 
 </div> 
 </div> 
+
 
 
 <div id="theme-wrapper">
@@ -143,7 +142,7 @@ Harshit Agrawal
 <li class="nav-header nav-header-first hidden-sm hidden-xs">
 Navigation
 </li>
-<li>
+<li class="active">
 <a href="index.html">
 <i class="fa fa-dashboard"></i>
 <span>Dashboard</span>
@@ -264,362 +263,64 @@ Components
 <div class="col-lg-12">
 <div class="row">
 <div class="col-lg-12">
+<div id="content-header" class="clearfix">
+<div class="pull-left">
 <ol class="breadcrumb">
 <li><a href="index.html">Home</a></li>
-<li class="active"><span>Profile</span></li>
-<li class="active"><span>View Profile</span></li>
+<li class="active"><span>Placement Statistics</span></li>
+<li class="active"><span>Branch Wise</span></li>
 </ol>
-<h1>User Profile</h1>
-</div>
-</div>
-<div class="row" id="user-profile">
-<div class="col-lg-3 col-md-4 col-sm-4">
-<div class="main-box clearfix">
-<div class="main-box-body clearfix">
-<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img src="img/samples/hk.jpg" alt="" class="profile-img img-responsive center-block"/></a>
-<h1 style="text-align:center;">Harshit Kumar Agrawal</h1>
-<div class="profile-details">
-<ul class="fa-ul">
-<li><i class="fa-li fa fa-graduation-cap"></i>M.C.A.</li>
-<li><i class="fa-li fa fa-calendar"></i>2016-2019</li>
-<li><i class="fa-li fa fa-university"></i>NITK Surathkal</li>
-</ul>
-</div>
-<div class="profile-message-btn center-block text-center">
-<a href="edit-profile.html" class="btn btn-success">
-<i class="fa fa-pencil-square"></i>
-Edit Profile
-</a>
-
+<h1>Branch Wise</h1>
 </div>
 </div>
 </div>
 </div>
-<div class="col-lg-9 col-md-8 col-sm-8">
-<div class="main-box clearfix">
-<div class="tabs-wrapper profile-tabs">
-<ul class="nav nav-tabs">
-<li class="active"><a href="#tab-newsfeed" data-toggle="tab">Personal</a></li>
-<li><a href="#tab-activity" data-toggle="tab">Academics</a></li>
-<li><a href="#tab-friends" data-toggle="tab">Additional</a></li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane fade in active" id="tab-newsfeed">
-<div id="newsfeed">
-<div class="story">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<div class="main-box clearfix">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+<div class="main-box">
+<header class="main-box-header clearfix">
+<h2>Placement Statistics</h2>
+</header>
 <div class="main-box-body clearfix">
 
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Branch:
-</th>
-<th class="text-right fstyle">
-M C A : Mathematical and Computational Sciences
-<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-</th>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Programme:
-</th>
-<th class="text-right fstyle">
-MCA
-<i class="fa fa-graduation-cap"></i>
-</th>
-</tr>
-</tbody>
-</table>
+</div>
+<div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+<div class="main-box">
+<header class="main-box-header clearfix">
+<h2>Company-Wise Statistics</h2>
+</header>
+<div class="main-box-body clearfix">
+<form class="form-inline" role="form">
+<div class="form-group form-group-select2">
+<lable>Branch:&nbsp;</lable>
+		<select style="width:300px" id="sel2">
+			<option value="India" selected="selected">MCA</option>
+			<option value="United States">B Tech</option>
+			<option value="United Kingdom">M Tech</option>
+			<option value="Afghanistan">Phd</option>
+			<option value="Albania">MBA</option>
+			<option value="Algeria">M Sc.</option>
+			<option value="American Samoa">M Tech. (Research)</option>
+		</select>
+	</div>
+<button type="submit" class="btn btn-success">Submit</button>	
+</form>
+</div>
 </div>
 </div>
 </div>
 
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Registration No:
-</th>
-<th class="text-right fstyle">
-162052
-<i class="fa fa-slack"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Father Name:
-</th>
-<th class="text-right fstyle">
-Sharad Garg
-<i class="fa fa-user"></i>
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Roll No:
-</th>
-<th class="text-right fstyle">
-16CA33
-<i class="fa fa-slack"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Mother Name:
-</th>
-<th class="text-right fstyle">
-Kusum Agrawal
-<i class="fa fa-user"></i>
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Date of Birth:
-</th>
-<th class="text-right fstyle">
-31/05/94
-<i class="fa fa-calendar"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Gender:
-</th>
-<th class="text-right fstyle">
-Male
-<i class="fa fa-user"></i>
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-12">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-E-Mail:
-</th>
-<th class="text-right fstyle">
-harshitagrawal10@gmail.com
-<i class="fa fa-envelope"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Phone:
-</th>
-<th class="text-right fstyle">
-9125136068
-<i class="fa fa-phone"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Alternative Phone:
-</th>
-<th class="text-right fstyle">
-8660855649
-<i class="fa fa-phone"></i>
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Pin Code:
-</th>
-<th class="text-right fstyle">
-575025
-<i class="fa fa-slack"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Nationality:
-</th>
-<th class="text-right fstyle">
-India
-<i class="fa fa-flag"></i> 
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-12">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Permanent Address:
-</th>
-<th class="text-right fstyle">
-283 chak zero road Allahabad
-<i class="fa fa-map-marker"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-12">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Corresponding Address:
-</th>
-<th class="text-right fstyle">
-NITK Boys Hostel 8th Block
-<i class="fa fa-map-marker"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-              </div>
 
 
 
-</div>
-
-</div>
-</div>
-<div class="tab-pane fade" id="tab-activity">
-<div class="table-responsive">
 
 
 
-</div>
-</div>
 
-
-<div class="tab-pane clearfix fade" id="tab-friends">
-
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <footer id="footer-bar" class="row">
 <p id="footer-copyright" class="col-xs-12">
 Copyright © National Institute of Technology 
@@ -721,61 +422,283 @@ Right-to-Left
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.nanoscroller.min.js"></script>
 <script src="js/demo.js"></script>  
- 
-<script src="js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
- 
+
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.slimscroll.min.js"></script> 
+<script src="js/moment.min.js"></script>
+<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="js/jquery-jvectormap-world-merc-en.js"></script>
+<script src="js/gdp-data.js"></script>
+<script src="js/flot/jquery.flot.min.js"></script>
+<script src="js/flot/jquery.flot.resize.min.js"></script>
+<script src="js/flot/jquery.flot.time.min.js"></script>
+<script src="js/flot/jquery.flot.threshold.js"></script>
+<script src="js/flot/jquery.flot.axislabels.js"></script>
+<script src="js/jquery.sparkline.min.js"></script>
+<script src="js/skycons.js"></script>
+
+<script src="js/raphael-min.js"></script>
+<script src="js/morris.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/pace.min.js"></script>
- 
-<script type="text/javascript">
-	    // When the window has finished loading create our google map below
-	    google.maps.event.addDomListener(window, 'load', init);
-	    
-	    function init() {
-	    	var latlng = new google.maps.LatLng(40.763986, -73.958674);
-	    	
-	        //APPLE MAP
-	        var mapOptionsApple = {
-	            zoom: 12,
-	            scrollwheel: false,
-	            center: latlng,
-	
-	            // How you would like to style the map. 
-	            // This is where you would paste any style found on Snazzy Maps.
-	            styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]}]
-	        };
-	
-	        var mapElementApple = document.getElementById('map-apple');
-	
-	        // Create the Google Map using out element and options defined above
-	        var mapApple = new google.maps.Map(mapElementApple, mapOptionsApple);
-	        
-	        var markerApple = new google.maps.Marker({
-	    		position: latlng,
-	    		map: mapApple
-	    	});
-	    }
-	    
-		$(document).ready(function() {
-			$('.conversation-inner').slimScroll({
-		        height: '340px'
-		    });
+
+<script>
+	$(document).ready(function() {
+		//BOX BUTTON SHOW AND CLOSE
+	   jQuery('.small-graph-box').hover(function() {
+		  jQuery(this).find('.box-button').fadeIn('fast');
+	   }, function() {
+		  jQuery(this).find('.box-button').fadeOut('fast');
+	   });
+	   jQuery('.small-graph-box .box-close').click(function() {
+		  jQuery(this).closest('.small-graph-box').fadeOut(200);
+		  return false;
+	   });
+	   
+	    //CHARTS
+	    function gd(year, day, month) {
+			return new Date(year, month - 1, day).getTime();
+		}
+		
+		graphArea2 = Morris.Area({
+			element: 'hero-area',
+			padding: 10,
+        behaveLikeLine: true,
+        gridEnabled: false,
+        gridLineColor: '#dddddd',
+        axes: true,
+        resize: true,
+        smooth:true,
+        pointSize: 0,
+        lineWidth: 0,
+        fillOpacity:0.85,
+			data: [
+				{period: '2010 Q1', iphone: 2666, ipad: null, itouch: 2647},
+				{period: '2010 Q2', iphone: 15778, ipad: 13794, itouch: 12041},
+				{period: '2010 Q3', iphone: 12912, ipad: 10969, itouch: 9901},
+				{period: '2010 Q4', iphone: 8767, ipad: 6597, itouch: 6689},
+				{period: '2011 Q1', iphone: 10810, ipad: 10914, itouch: 12293},
+				{period: '2011 Q2', iphone: 9670, ipad: 9000, itouch: 7881},
+				{period: '2011 Q3', iphone: 4820, ipad: 3795, itouch: 1588},
+				{period: '2011 Q4', iphone: 15073, ipad: 8967, itouch: 5175},
+				{period: '2012 Q1', iphone: 10687, ipad: 4460, itouch: 2028},
+				{period: '2012 Q2', iphone: 8432, ipad: 5713, itouch: 1791}
+			],
+			lineColors:['#869d9d','#EFC94C','#45B29D'],
+			xkey: 'period',
+            redraw: true,
+            ykeys: ['iphone', 'ipad', 'itouch'],
+            labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+			pointSize: 2,
+			hideHover: 'auto',
+			resize: true
 		});
 		
-		$(function() {
-			$(document).ready(function() {
-				$('#newsfeed .story-images').magnificPopup({
-					type: 'image',
-					delegate: 'a',
-					gallery: {
-						enabled: true
-				    }
-				});
+			// graph real time
+		if ($('#graph-flot-realtime').length) {
+		
+			var data = [],
+				totalPoints = 300;
+
+			function getRandomData() {
+
+				if (data.length > 0)
+					data = data.slice(1);
+
+				// Do a random walk
+
+				while (data.length < totalPoints) {
+
+					var prev = data.length > 0 ? data[data.length - 1] : 50,
+						y = prev + Math.random() * 10 - 5;
+
+					if (y < 0) {
+						y = 0;
+					} else if (y > 100) {
+						y = 100;
+					}
+
+					data.push(y);
+				}
+
+				// Zip the generated y values with the x values
+
+				var res = [];
+				for (var i = 0; i < data.length; ++i) {
+					res.push([i, data[i]])
+				}
+
+				return res;
+			}
+
+			// Set up the control widget
+
+			var updateInterval = 30;
+			$().val(updateInterval).change(function () {
+				var v = $(this).val();
+				if (v && !isNaN(+v)) {
+					updateInterval = +v;
+					if (updateInterval < 1) {
+						updateInterval = 1;
+					} else if (updateInterval > 2000) {
+						updateInterval = 2000;
+					}
+					$(this).val("" + updateInterval);
+				}
 			});
+
+			var plot = $.plot("#graph-flot-realtime", [ getRandomData() ], {
+				series: {
+					lines: { 
+						show: true,
+						lineWidth: 1,
+						fill: true, 
+						fillColor: { colors: [ { opacity: 0.5 }, { opacity: 0.5 } ] }
+					},
+					shadowSize: 0	// Drawing is faster without shadows
+				},
+				colors: ["#1ABC9C"],
+				
+				yaxis: {
+					min: 0,
+					max: 110
+				},
+				xaxis: {
+					show: false
+				},
+				grid:{borderWidth:1,backgroundColor:"#FFF"}
+			});
+
+			function update() {
+
+				plot.setData([getRandomData()]);
+
+				// Since the axes don't change, we don't need to call plot.setupGrid()
+
+				plot.draw();
+				setTimeout(update, updateInterval);
+			}
+
+			update();
+		}
+	    
+		//WORLD MAP
+		$('#world-map').vectorMap({
+			map: 'world_merc_en',
+			backgroundColor: '#ffffff',
+			zoomOnScroll: false,
+			regionStyle: {
+				initial: {
+					fill: '#e1e1e1',
+					stroke: 'none',
+					"stroke-width": 0,
+					"stroke-opacity": 1
+				},
+				hover: {
+					"fill-opacity": 0.8
+				},
+				selected: {
+					fill: '#8dc859'
+				},
+				selectedHover: {
+				}
+			},
+			markerStyle: {
+				initial: {
+					fill: '#FF6C60',
+					stroke: '#FF6C60'
+				}
+			},
+			markers: [
+				{latLng: [38.35, -121.92], name: 'Los Angeles - 23'},
+				{latLng: [39.36, -73.12], name: 'New York - 84'},
+				{latLng: [50.49, -0.23], name: 'London - 43'},
+				{latLng: [36.29, 138.54], name: 'Tokyo - 33'},
+				{latLng: [37.02, 114.13], name: 'Beijing - 91'},
+				{latLng: [-32.59, 150.21], name: 'Sydney - 22'},
+			],
+			series: {
+				regions: [{
+					values: gdpData,
+					scale: ['#6fc4fe', '#58DDD0'],
+					normalizeFunction: 'polynomial'
+				}]
+			},
+			onRegionLabelShow: function(e, el, code){
+				el.html(el.html()+' ('+gdpData[code]+')');
+			}
 		});
-	
+
+		/* SPARKLINE - graph in header */
+		var orderValues = [10,8,5,7,4,4,3,8,0,7,10,6,5,4,3,6,8,9];
+
+		$('.spark-orders').sparkline(orderValues, {
+			type: 'bar', 
+			barColor: '#7FC8BA',
+			height: 25,
+			barWidth: 6
+		});
+
+		var revenuesValues = [8,3,2,6,4,9,1,10,8,2,5,8,6,9,3,4,2,3,7];
+
+		$('.spark-revenues').sparkline(revenuesValues, {
+			type: 'bar', 
+			barColor: '#7FC8BA',
+			height: 25,
+			barWidth: 6
+		});
+
+		/* ANIMATED WEATHER */
+		var skycons = new Skycons({"color": "#58DDD0"});
+		// on Android, a nasty hack is needed: {"resizeClear": true}
+
+		// you can add a canvas by it's ID...
+		skycons.add("current-weather", Skycons.SNOW);
+
+		// start animation!
+		skycons.play();
+
+		$('.conversation-inner').slimScroll({
+	        height: '405px',
+	        wheelStep: 35,
+	    });
+		
+		$('.chat-input').keypress(function (ev) {
+			var p = ev.which;
+			var chatTime = moment().format("MMMM Do YYYY, h:mm a");
+			var chatText = $('.chat-input').val();
+			if (p == 13) {
+				if (chatText == "") {
+					alert('Empty Field');
+				} else {
+					$('<div class="conversation-item item-left clearfix"><div class="conversation-user"><img src="img/samples/ryan.png" alt="male"/></div><div class="conversation-body"><div class="name">Ryan Gossling</div><div class="time hidden-xs">' + chatTime + '</div><div class="text">' + chatText + '</div></div></div>').appendTo('.conversation-inner');
+					$(this).val('');
+					$('.conversation-inner').scrollTo('100%', '100%', {
+					easing: 'swing'
+					});
+				}
+				return false;
+				ev.epreventDefault();
+				ev.stopPropagation();
+			}
+		});
+		$('.chat-send .btn').click(function () {
+			var chatTime = moment().format("MMMM Do YYYY, h:mm a");
+			var chatText = $('.chat-input').val();
+			if (chatText == "") {
+				alert('Empty Field');
+				$(".chat-input").focus();
+			} else {
+				$('<div class="conversation-item item-left clearfix"><div class="conversation-user"><img src="img/samples/ryan.png" alt="male"/></div><div class="conversation-body"><div class="name">Ryan Gossling</div><div class="time hidden-xs">' + chatTime + '</div><div class="text">' + chatText + '</div></div></div>').appendTo('.conversation-inner');
+				$('.chat-input').val('');
+				$(".chat-input").focus();
+				$('.conversation-inner').scrollTo('100%', '100%', {
+					easing: 'swing'
+				});
+			}
+			return false;
+		});
+	});
 	</script>
 </body>
 </html>
