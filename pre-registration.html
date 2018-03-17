@@ -16,24 +16,24 @@
  
 <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
  
-<link rel="stylesheet" type="text/css" href="css/libs/magnific-popup.css">
- 
+<link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/jquery-jvectormap-1.2.2.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/weather-icons.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/morris.css" type="text/css"/>
 <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+<link rel="stylesheet" type="text/css" href="css/libs/dataTables.fixedHeader.css">
+<link rel="stylesheet" type="text/css" href="css/libs/dataTables.tableTools.css">
  
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
 	<![endif]-->
-  <style>
-  .fstyle
-  {
-    font-size:12px;color:#666666;
-  }
-  </style>
 
+	
 </head>
 <body>
+
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
@@ -73,6 +73,7 @@ Upload Profile Picture
 </div> 
 </div> 
 </div> 
+
 
 
 <div id="theme-wrapper">
@@ -143,7 +144,7 @@ Harshit Agrawal
 <li class="nav-header nav-header-first hidden-sm hidden-xs">
 Navigation
 </li>
-<li>
+<li class="active">
 <a href="index.html">
 <i class="fa fa-dashboard"></i>
 <span>Dashboard</span>
@@ -264,360 +265,109 @@ Components
 <div class="col-lg-12">
 <div class="row">
 <div class="col-lg-12">
+<div id="content-header" class="clearfix">
+<div class="pull-left">
 <ol class="breadcrumb">
 <li><a href="index.html">Home</a></li>
-<li class="active"><span>Profile</span></li>
-<li class="active"><span>View Profile</span></li>
+<li class="active"><span>Companies</span></li>
+<li class="active"><span>Pre Registration</span></li>
 </ol>
-<h1>User Profile</h1>
+<h1>Pre Registration</h1>
 </div>
 </div>
-<div class="row" id="user-profile">
-<div class="col-lg-3 col-md-4 col-sm-4">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
 <div class="main-box clearfix">
+<header class="main-box-header clearfix">
+<h2 style="text-align:center">COMPANIES OPEN FOR PRE-REGISTRATION</h2>
+<hr>
+</header>
 <div class="main-box-body clearfix">
-<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img src="img/samples/hk.jpg" alt="" class="profile-img img-responsive center-block"/></a>
-<h1 style="text-align:center;">Harshit Kumar Agrawal</h1>
-<div class="profile-details">
-<ul class="fa-ul">
-<li><i class="fa-li fa fa-graduation-cap"></i>M.C.A.</li>
-<li><i class="fa-li fa fa-calendar"></i>2016-2019</li>
-<li><i class="fa-li fa fa-university"></i>NITK Surathkal</li>
-</ul>
-</div>
-<div class="profile-message-btn center-block text-center">
-<a href="edit-profile.html" class="btn btn-success">
-<i class="fa fa-pencil-square"></i>
-Edit Profile
-</a>
-
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-9 col-md-8 col-sm-8">
-<div class="main-box clearfix">
-<div class="tabs-wrapper profile-tabs">
-<ul class="nav nav-tabs">
-<li class="active"><a href="#tab-newsfeed" data-toggle="tab">Personal</a></li>
-<li><a href="#tab-activity" data-toggle="tab">Academics</a></li>
-<li><a href="#tab-friends" data-toggle="tab">Additional</a></li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane fade in active" id="tab-newsfeed">
-<div id="newsfeed">
-<div class="story">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<div class="main-box clearfix">
-<div class="main-box-body clearfix">
-
-<div class="row">
-<div class="col-lg-6">
 <div>
-<table class="table">
+<table id="table-example" class="table table-hover">
+<thead>
+<tr>
+<th>Sr No.</th>
+<th>Visiting Date</th>
+<th>Company Name</th>
+<th>UG Salary</th>
+<th>PG Salary</th>
+<th>Type</th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<th>
-Branch:
-</th>
-<th class="text-right fstyle">
-M C A : Mathematical and Computational Sciences
-<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Dream</td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
 <tr>
-<th>
-Programme:
-</th>
-<th class="text-right fstyle">
-MCA
-<i class="fa fa-graduation-cap"></i>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td>Dream</td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
 <tr>
-<th>
-Registration No:
-</th>
-<th class="text-right fstyle">
-162052
-<i class="fa fa-slack"></i>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td>Dream</td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
 <tr>
-<th>
-Father Name:
-</th>
-<th class="text-right fstyle">
-Sharad Garg
-<i class="fa fa-user"></i>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td>Dream</td>
 </tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
 <tr>
-<th>
-Roll No:
-</th>
-<th class="text-right fstyle">
-16CA33
-<i class="fa fa-slack"></i>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td>Dream</td>
 </tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
 <tr>
-<th>
-Mother Name:
-</th>
-<th class="text-right fstyle">
-Kusum Agrawal
-<i class="fa fa-user"></i>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td>Dream</td>
 </tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
 <tr>
-<th>
-Date of Birth:
-</th>
-<th class="text-right fstyle">
-31/05/94
-<i class="fa fa-calendar"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Gender:
-</th>
-<th class="text-right fstyle">
-Male
-<i class="fa fa-user"></i>
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-12">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-E-Mail:
-</th>
-<th class="text-right fstyle">
-harshitagrawal10@gmail.com
-<i class="fa fa-envelope"></i>
-</th>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td>Dream</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Phone:
-</th>
-<th class="text-right fstyle">
-9125136068
-<i class="fa fa-phone"></i>
-</th>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Alternative Phone:
-</th>
-<th class="text-right fstyle">
-8660855649
-<i class="fa fa-phone"></i>
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Pin Code:
-</th>
-<th class="text-right fstyle">
-575025
-<i class="fa fa-slack"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div class="col-lg-6">
-<div>
-<table class="table">
-<tr>
-<th>
-Nationality:
-</th>
-<th class="text-right fstyle">
-India
-<i class="fa fa-flag"></i> 
-</th>
-</tr>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-12">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Permanent Address:
-</th>
-<th class="text-right fstyle">
-283 chak zero road Allahabad
-<i class="fa fa-map-marker"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-12">
-<div>
-<table class="table">
-<tbody>
-<tr>
-<th>
-Corresponding Address:
-</th>
-<th class="text-right fstyle">
-NITK Boys Hostel 8th Block
-<i class="fa fa-map-marker"></i>
-</th>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-              </div>
-
-
-
-</div>
-
-</div>
-</div>
-<div class="tab-pane fade" id="tab-activity">
-<div class="table-responsive">
-
-
-
-</div>
-</div>
-
-
-<div class="tab-pane clearfix fade" id="tab-friends">
-
-
-</div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <footer id="footer-bar" class="row">
@@ -678,11 +428,21 @@ Copyright © National Institute of Technology
 <script src="js/jquery.nanoscroller.min.js"></script>
 <script src="js/demo.js"></script>  
  
-<script src="js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/dataTables.fixedHeader.js"></script>
+<script src="js/dataTables.tableTools.js"></script>
+<script src="js/jquery.dataTables.bootstrap.js"></script>
  
 <script src="js/scripts.js"></script>
 <script src="js/pace.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var table = $('#table-example').dataTable({
+			'info': false,
+		
+			
+		});
+	});
+	</script>
 </body>
 </html>
