@@ -147,7 +147,6 @@ Navigation
 <a href="index.html">
 <i class="fa fa-dashboard"></i>
 <span>Dashboard</span>
-<span class="label label-primary label-circle pull-right">23</span>
 </a>
 </li>
 <li>
@@ -285,35 +284,35 @@ Components
 <h2></h2>
 </header>
 <div class="main-box-body clearfix">
-<form class="form-horizontal" role="form">
+<form id="myForm" class="form-horizontal" role="form">
 <div class="form-group">
-<label for="inputEmail1" class="col-lg-2 control-label">Name*</label>
+<label for="" class="col-lg-2 control-label"><b>Name*</b></label>
 <div class="col-lg-8">
-<input type="text" class="form-control" id="inputEmail1" placeholder="Name">
+<input type="text" class="form-control" id="field_name" name="uname" title="Enter valid Name" placeholder="Name" pattern="[a-zA-Z ]+" required>
 </div>
 </div>
 <div class="form-group">
-<label for="inputEmail1" class="col-lg-2 control-label">Email*</label>
+<label for="inputEmail1" class="col-lg-2 control-label"><b>Email*</b></label>
 <div class="col-lg-8">
-<input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+<input type="email" class="form-control" id="field_email" name="email" title="Enter valid Email Id" placeholder="Email" required>
 </div>
 </div>
 <div class="form-group">
-<label for="inputEmail1" class="col-lg-2 control-label">Phone*</label>
+<label for="" class="col-lg-2 control-label"><b>Phone*</b></label>
 <div class="col-lg-4">
-<input type="text" class="form-control" id="" placeholder="Phone">
+<input type="text" class="form-control" id="field_phone" name="phone" title="Enter 10 digit Valid Phone No without space " placeholder="Phone" pattern="\d{10}" required>
 </div>
 </div>
 <div class="form-group">
-<label for="inputEmail1" class="col-lg-2 control-label">Subject*</label>
+<label for="inputEmail1" class="col-lg-2 control-label"><b>Subject*</b></label>
 <div class="col-lg-6">
-<input type="text" class="form-control" id="" placeholder="Subject">
+<input type="text" class="form-control" id="field_subject" name="subject" title="Enter the subject" placeholder="Subject" required>
 </div>
 </div>
 <div class="form-group">
-<label for="inputPassword1" class="col-lg-2 control-label">Message*</label>
+<label for="inputPassword1" class="col-lg-2 control-label"><b>Message*</b></label>
 <div class="col-lg-10">
-<textarea for="inputlg" class="form-control" id="" placeholder=""></textarea>
+<textarea for="inputlg" class="form-control" id="field_message" name="message" title="Enter the Message" placeholder="" required></textarea>
 </div>
 </div>
 <div class="form-group">
@@ -412,5 +411,110 @@ Copyright © National Institute of Technology
 <script src="js/morris.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/pace.min.js"></script>
+
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // JavaScript form validation
+
+    var checkForm = function(e)
+    {
+      if(this.uname.value == "") {
+        alert("Error: Name cannot be blank!");
+        this.uname.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      re= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if(!re.test(this.email.value)) {
+        alert("Error: Enter a valid Email Id!");
+        this.email.focus();
+        e.preventDefault();
+        return;
+      }
+      re =  /^[a-zA-Z ]{2,30}$/;
+      if(!re.test(this.uname.value)) {
+        alert("Error: Name must contain only letters");
+        this.uname.focus();
+        e.preventDefault();
+        return;
+      }
+      re= /^\d{10}$/;
+      if(!re.test(this.phone.value)) {
+        alert("Error: Enter valid Phone No.!");
+        this.phone.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      if(this.subject.value == "") {
+        alert("Error: Subject cannot be blank!");
+        this.subject.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      if(this.message.value == "") {
+        alert("Error: Message cannot be blank!");
+        this.message.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+    };
+
+    var myForm = document.getElementById("myForm");
+    myForm.addEventListener("submit", checkForm, true);
+
+    // HTML5 form validation
+
+    var supports_input_validity = function()
+    {
+      var i = document.createElement("input");
+      return "setCustomValidity" in i;
+    }
+
+    if(supports_input_validity()) {
+      var nameInput = document.getElementById("field_name");
+      nameInput.setCustomValidity(nameInput.title);
+      
+      var emailInput = document.getElementById("field_email");
+      emailInput.setCustomValidity(emailInput.title);
+
+
+      var phoneInput = document.getElementById("field_phone");
+      phoneInput.setCustomValidity(phoneInput.title);
+
+      var subjectInput = document.getElementById("field_subject");
+      subjectInput.setCustomValidity(subjectInput.title);
+
+      var messageInput = document.getElementById("field_message");
+      messageInput.setCustomValidity(messageInput.title);
+      // input key handlers
+
+      nameInput.addEventListener("keyup", function(e) {
+        nameInput.setCustomValidity(this.validity.patternMismatch ? usernameInput.title : "");
+      }, false);
+
+      emailInput.addEventListener("keyup", function(e) {
+        emailInput.setCustomValidity(this.validity.patternMismatch ? emailInput.title : "");
+      }, false);
+       
+      phoneInput.addEventListener("keyup", function(e) {
+        this.setCustomValidity(this.validity.patternMismatch ? phoneInput.title : "");
+      }, false);
+
+      subjectInput.addEventListener("keyup", function(e) {
+        this.setCustomValidity(this.validity.patternMismatch ? subjectInput.title : "");
+      }, false);
+
+      messageInput.addEventListener("keyup", function(e) {
+        this.setCustomValidity(this.validity.patternMismatch ? messageInput.title : "");
+      }, false);
+
+    }
+
+  }, false);
+
+</script>
+
 </body>
 </html>

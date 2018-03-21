@@ -126,7 +126,7 @@ Upload Profile Picture
 <section id="col-left" class="col-left-nano">
 <div id="col-left-inner" class="col-left-nano-content">
 <div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
-<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img alt="" src="img/samples/hk.jpg"/></a>
+<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img style="float:center" alt="Profile Pic" src="img/samples/hk.jpg"/></a>
 <div class="user-box">
 <span class="name">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -285,49 +285,47 @@ Components
 </header>
 <div class="main-box-body clearfix">
 <div id="myWizard" class="wizard">
-<div class="wizard-inner">
+<!--<div class="wizard-inner">
 <ul class="steps">
 <li data-target="#step1" class="active"><span class="badge badge-default badge-primary">1</span>Basic Details<span class="chevron"></span></li>
 <li data-target="#step2"><span class="badge badge-default">2</span>Academic<span class="chevron"></span></li>
 <li data-target="#step3"><span class="badge badge-default">3</span>Semester Details<span class="chevron"></span></li>
-<!--<li data-target="#step4"><span class="badge">4</span>Step 4<span class="chevron"></span></li>-->
+<!--<li data-target="#step4"><span class="badge">4</span>Step 4<span class="chevron"></span></li>--
 </ul>
 <div class="actions">
 <button type="button" class="btn btn-default btn-mini btn-prev"> <i class="icon-arrow-left"></i>Prev</button>
-<button type="button" class="btn btn-success btn-mini btn-next" data-last="Finish">Next<i class="icon-arrow-right"></i></button>
+<button type="submit" class="btn btn-success btn-mini btn-next" data-last="Finish">Next<i class="icon-arrow-right"></i></button>
 </div>
-</div>
+</div>-->
 <div class="step-content">
 <div class="step-pane active" id="step1">
-<br/>
-<h4>Enter Your Basic Details</h4>
 <form role="form">
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">First Name *</h5>
-		<input type='text' class="form-control" placeholder="Enter First Name"/>
+		<input type='text' class="form-control" placeholder="Enter First Name" pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Middle Name</h5>
-		<input type='text' class="form-control" placeholder="Enter Middle Name"/>
+		<input type='text' class="form-control" placeholder="Enter Middle Name" pattern="[a-zA-Z ]+"/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Last Name</h5>
-		<input type='text' class="form-control" placeholder="Enter Last Name"/>
+		<input type='text' class="form-control" placeholder="Enter Last Name" pattern="[a-zA-Z ]+"/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Registration Number*</h5>
-		<input type='text' class="form-control" placeholder="Enter Registration Number"/>
+		<input type='text' class="form-control" placeholder="Enter Registration Number" pattern="\d{6}" required/>
 	</div>
 	<!-- used the input type='text' to store roll no -->
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Roll No*</h5>
-		<input type='text' class="form-control" placeholder="Enter Roll Number"/>
+		<input type='text' class="form-control" placeholder="Enter Roll Number" pattern="[a-zA-Z0-9 ]+" required/>
 	</div>
 
     <div class="form-group form-group-select2">
 		<h5>Programme*</h5>
-		<select style="width:300px" id="sel2">
-			<option value="India" selected="selected">MCA</option>
+		<select style="width:300px" id="sel2" required>
+			<option value="India">MCA</option>
 			<option value="United States">B Tech</option>
 			<option value="United Kingdom">M Tech</option>
 			<option value="Afghanistan">Phd</option>
@@ -339,28 +337,34 @@ Components
 
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Branch*</h5>
-		<input type='email' class="form-control" placeholder="Enter Branch"/>
+		<input type='text' class="form-control" placeholder="Enter Branch" pattern="[a-zA-Z ]+" required/>
 	</div>
+
+	<div class="form-group">
+		<h5 for="exampleInputEmail1">Enterance Exam Rank*</h5>
+		<input type='text' class="form-control" placeholder="Enterance Exam Rank" pattern="[0-9]+" required/>
+	</div>
+	
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Date Of Birth*</h5>
-		<input type='date' class="form-control" placeholder="Date Of Birth"/>
+		<input type='date' class="form-control" placeholder="Date Of Birth" required/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Father's Name *</h5>
-		<input type='text' class="form-control" placeholder="Father's Name"/>
+		<input type='text' class="form-control" placeholder="Father's Name" pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Mother's Name*</h5>
-		<input type='text' class="form-control" placeholder="Mother's Name"/>
+		<input type='text' class="form-control" placeholder="Mother's Name" pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">E-Mail</h5>
-		<input type='email' class="form-control" placeholder="Enter E-Mail"/>
+		<input type='email' class="form-control" placeholder="Enter E-Mail" required/>
 	</div>
  
-	<div class="form-group">
+	<div class="form-group form-group-select2">
 		<h5>Gender*</h5>
-		<select class="form-control">
+		<select style="width:300px" id="sel2" required>
 			<option value="M" selected="selected">Male</option>
 			<option value="F">Female</option>
 		</select>
@@ -368,7 +372,7 @@ Components
 <!-- Add the options in backend -->
 	<div class="form-group form-group-select2">
 		<h5>Nationality*</h5>
-		<select style="width:300px" id="sel2">
+		<select style="width:300px" id="sel2" required>
 			<option value="India" selected="selected">India</option>
 			<option value="United States">United States</option>
 			<option value="United Kingdom">United Kingdom</option>
@@ -394,29 +398,37 @@ Components
 <!-- Address Part -->
 	<div class="form-group">
 		<h5 for="">Permanent Address*</h5>
-		<textarea class="form-control" id="" rows="3"></textarea>
+		<textarea class="form-control" id="" rows="3" required></textarea>
 	</div>
 
 	<div class="form-group">
 		<h5 for="">Corresponding Address*</h5>
-		<textarea class="form-control" id="" rows="3"></textarea>
+		<textarea class="form-control" id="" rows="3" required></textarea>
 	</div>
 	<div class="form-group">
 		<h5>Pincode*</h5>
-		<input type="number" class="form-control" placeholder="Pincode"/>
+		<input type="text" class="form-control" placeholder="Pincode" pattern="\d{6}" required/>
 	</div>
 
 	<div class="form-group">
 		<h5>Phone*</h5>
-		<input type="text" class="form-control" placeholder="Phone Number"/>
+		<input type="text" class="form-control" placeholder="Phone Number" pattern="\d{10}" required/>
 	</div>
 	
 	<div class="form-group">
 		<h5>Alternative Phone</h5>
-		<input type="number" class="form-control" placeholder="Alternative Phone"/>
+		<input type="text" class="form-control" placeholder="Alternative Phone Number" pattern="\d{10}" //>
 	</div>
-</form>
+    <div class="form-group">
+<div class="col-lg-10">
+<button type="submit" class="btn btn-success">Submit</button>
 </div>
+</div>
+</form>
+ </div>
+
+
+ <!--
 <div class="step-pane" id="step2">
 <br/>
 <div class="table-responsive">
@@ -586,6 +598,12 @@ Components
                 </tbody>
               </table>
 </div>
+ <div class="form-group">
+<div class="col-lg-offset-2 col-lg-10">
+<button type="submit" class="btn btn-success">Submit</button>
+</div>
+</div>
+</form>
 <div class="step-pane" id="step4">
 <br/>
 <h4>This is step 4</h4>
@@ -593,7 +611,7 @@ Components
 <i class="fa fa-check-circle fa-fw fa-lg"></i>
 <strong>Congratulation!</strong> You have successfully finished our nice wizard.
 </div>
-</div>
+</div>-->
 </div>
 </div>
 </div>

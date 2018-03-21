@@ -295,6 +295,7 @@ Components
 <th>UG Salary</th>
 <th>PG Salary</th>
 <th>Type</th>
+<th>Register</th>
 </tr>
 </thead>
 <tbody>
@@ -304,7 +305,8 @@ Components
 <td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
-<td>Dream</td>
+<td>Visited</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 <tr>
 <td>1</td>
@@ -313,7 +315,7 @@ Components
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
 <td>Visited</td>
-<td>Dream</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 <tr>
 <td>1</td>
@@ -322,7 +324,7 @@ Components
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
 <td>Visited</td>
-<td>Dream</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 <tr>
 <td>1</td>
@@ -331,7 +333,7 @@ Components
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
 <td>Visited</td>
-<td>Dream</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 <tr>
 <td>1</td>
@@ -340,7 +342,7 @@ Components
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
 <td>Visited</td>
-<td>Dream</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 <tr>
 <td>1</td>
@@ -349,7 +351,7 @@ Components
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
 <td>Visited</td>
-<td>Dream</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 <tr>
 <td>1</td>
@@ -358,7 +360,7 @@ Components
 <td><b>22.39</b></td>
 <td><b>22.39</b></td>
 <td>Visited</td>
-<td>Dream</td>
+<td><button class="btn btn-success">Register</bitton></td>
 </tr>
 </tbody>
 </table>
@@ -366,6 +368,98 @@ Components
 </div>
 </div>
 </div>
+
+<div class="col-lg-6">
+<div class="main-box clearfix">
+<header class="main-box-header clearfix">
+<h2 style="text-align:center">COMPANIES PRE-REGISTERED BY YOU</h2>
+<hr>
+</header>
+<div class="main-box-body clearfix">
+<div>
+<table id="table-example-1" class="table table-hover">
+<thead>
+<tr>
+<th>Sr No.</th>
+<th>Visiting Date</th>
+<th>Company Name</th>
+<th>UG Salary</th>
+<th>PG Salary</th>
+<th>Type</th>
+<th>Remove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+<tr>
+<td>1</td>
+<td>  Aug. 3, 2017</td>
+<td><span>Microsoft</Spam><br><span>(Bangalore)</span></td>
+<td><b>22.39</b></td>
+<td><b>22.39</b></td>
+<td>Visited</td>
+<td><button class="btn btn-success">Remove</bitton></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -438,6 +532,13 @@ Copyright © National Institute of Technology
 <script>
 	$(document).ready(function() {
 		var table = $('#table-example').dataTable({
+			'info': false,
+		
+			
+		});
+	});
+	$(document).ready(function() {
+		var table = $('#table-example-1').dataTable({
 			'info': false,
 		
 			
