@@ -25,6 +25,7 @@
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
 	<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 
 .tcolor
@@ -83,12 +84,12 @@ Upload Profile Picture
 <header class="navbar" id="header-navbar">
 <div class="container">
 <a href="index.html" id="logo" class="navbar-brand">
-<img src="img/logo.png" alt="" class="normal-logo logo-white"/>
-<img src="img/logo-black.png" alt="" class="normal-logo logo-black"/>
-<img src="img/logo-small.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+<img src="img/logo.png" alt="NITK" class="normal-logo logo-white"/>
+<img src="img/logo-black.png" alt="NITK" class="normal-logo logo-black"/>
+<img src="img/logo-small.png" alt="NITK" class="small-logo hidden-xs hidden-sm hidden"/>
 </a>
 <div class="clearfix">
-<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+<button  class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
 <span class="sr-only">Toggle navigation</span>
 <span class="fa fa-bars"></span>
 </button>
@@ -123,10 +124,13 @@ Upload Profile Picture
 <div id="page-wrapper" class="container">
 <div class="row">
 <div id="nav-col">
+
 <section id="col-left" class="col-left-nano">
+
 <div id="col-left-inner" class="col-left-nano-content">
-<div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
-<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img style="float:center" alt="Profile Pic" src="img/samples/hk.jpg"/></a>
+<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img id="profile_pic" alt="Profile Pic" class="img-circle hidden-sm hidden-xs profile_pic" src="img/samples/hk.jpg"/></a>
+<div id="user-left-box" style="padding-top:0px;" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
+
 <div class="user-box">
 <span class="name">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -151,7 +155,7 @@ Navigation
 <a href="index.html">
 <i class="fa fa-dashboard"></i>
 <span>Dashboard</span>
-<span class="label label-primary label-circle pull-right">23</span>
+
 </a>
 </li>
 <li>
@@ -301,16 +305,8 @@ Components
 <div class="step-pane active" id="step1">
 <form role="form">
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">First Name *</h5>
-		<input type='text' class="form-control" placeholder="Enter First Name" pattern="[a-zA-Z ]+" required/>
-	</div>
-	<div class="form-group">
-		<h5 for="exampleInputEmail1">Middle Name</h5>
-		<input type='text' class="form-control" placeholder="Enter Middle Name" pattern="[a-zA-Z ]+"/>
-	</div>
-	<div class="form-group">
-		<h5 for="exampleInputEmail1">Last Name</h5>
-		<input type='text' class="form-control" placeholder="Enter Last Name" pattern="[a-zA-Z ]+"/>
+		<h5 for="exampleInputEmail1">Name*</h5>
+		<input type='text' class="form-control" placeholder="Enter Name" pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Registration Number*</h5>
@@ -347,32 +343,36 @@ Components
 	
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">Date Of Birth*</h5>
-		<input type='date' class="form-control" placeholder="Date Of Birth" required/>
+		<input type='date' id="field_date" class="form-control" placeholder="Date Of Birth" required/>
 	</div>
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Father's Name *</h5>
+		<h5 for="exampleInputEmail1">Father's Name*</h5>
 		<input type='text' class="form-control" placeholder="Father's Name" pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Mother's Name*</h5>
-		<input type='text' class="form-control" placeholder="Mother's Name" pattern="[a-zA-Z ]+" required/>
+		<h5 for="exampleInputEmail1">Mother's Name</h5>
+		<input type='text' class="form-control" placeholder="Mother's Name" pattern="[a-zA-Z ]+" />
 	</div>
 	<div class="form-group">
 		<h5 for="exampleInputEmail1">E-Mail</h5>
 		<input type='email' class="form-control" placeholder="Enter E-Mail" required/>
 	</div>
- 
-	<div class="form-group form-group-select2">
+
+	<div class="form-inline form-group-select2">
+	<div class="row">
+	    <div class="col-lg-4">
 		<h5>Gender*</h5>
-		<select style="width:300px" id="sel2" required>
+		<select style="width:200px" id="sel2" required>
 			<option value="M" selected="selected">Male</option>
 			<option value="F">Female</option>
 		</select>
-	</div>
+		</div>
+	
 <!-- Add the options in backend -->
-	<div class="form-group form-group-select2">
+	<!--<div class="form-group form-group-select2">-->
+	<div class="col-lg-4">
 		<h5>Nationality*</h5>
-		<select style="width:300px" id="sel2" required>
+		<select style="width:200px" id="sel2" required>
 			<option value="India" selected="selected">India</option>
 			<option value="United States">United States</option>
 			<option value="United Kingdom">United Kingdom</option>
@@ -393,18 +393,40 @@ Components
 			<option value="Azerbaijan">Azerbaijan</option>
 			<option value="Slovakia">Slovakia</option>
 		</select>
+		</div>
+	
+	<!--<div class="form-group form-group-select2">-->
+	<div class="col-lg-4">
+		<h5>Category*</h5>
+		<select style="width:200px" id="sel2" required>
+			<option value="M" selected="selected">General</option>
+			<option value="F">Obc</option>
+			<option value="F">Sc</option>
+			<option value="F">St</option>
+		</select>
+		</div>
+	</div>
 	</div>
 
+    <br>
 <!-- Address Part -->
 	<div class="form-group">
 		<h5 for="">Permanent Address*</h5>
-		<textarea class="form-control" id="" rows="3" required></textarea>
+		<textarea class="form-control" id="field_Permanent_Address" rows="3" required></textarea>
 	</div>
 
 	<div class="form-group">
 		<h5 for="">Corresponding Address*</h5>
-		<textarea class="form-control" id="" rows="3" required></textarea>
+		<textarea class="form-control" id="field_Corresponding_address" rows="3" required></textarea>
 	</div>
+	<div class="form-group">
+    <div class="checkbox-nice">
+    <input type="checkbox" id="checkbox-1" />
+    <label for="checkbox-1">
+    Same as permanent address
+    </label>
+    </div>
+    </div>
 	<div class="form-group">
 		<h5>Pincode*</h5>
 		<input type="text" class="form-control" placeholder="Pincode" pattern="\d{6}" required/>
@@ -694,6 +716,20 @@ Copyright © National Institute of Technology
 		$("#maskedPhone").mask("(999) 999-9999");
 		$("#maskedPhoneExt").mask("(999) 999-9999? x99999");
 	});
-	</script>
+
+	$(function(){
+    $('#checkbox-1').click(function(){
+      // ...do this for each line
+      $('#field_Corresponding_address').val($('#field_Permanent_Address').val());
+    });
+    });
+
+    $(document).ready(function(){
+    $('#make-small-nav').click(function(){
+        $('#profile_pic').toggle();
+    });
+    });
+    
+</script>
 </body>
 </html>

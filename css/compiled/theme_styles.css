@@ -212,7 +212,7 @@ a:focus { color: #1ABC9C }
     margin-top: 0;
     margin-bottom: 0;
     position: relative;
-    min-height: 1200px;
+    min-height: 605px;
     padding: 15px 15px 35px 15px;
     margin-left: 220px;
 }
@@ -1130,7 +1130,7 @@ h3 .small { padding-left: 8px }
     margin: 0 auto;
     position: relative;
 }
-.boxed-layout #page-wrapper { background-color: #2c3e50 }
+.boxed-layout #page-wrapper { background-color: #2c3e50; }
 .boxed-layout.fixed-header #header-navbar,
 .boxed-layout.fixed-footer #footer-bar {
     max-width: 1200px;
@@ -6860,7 +6860,15 @@ svg { width: 100%!important }
     background-color: #1ABC9C; }
  }
 
-
+.profile_pic
+{
+    display:block; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding-top:15px;
+    height:120px;
+    width:100px;
+}
 
  
 
