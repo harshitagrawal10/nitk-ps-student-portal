@@ -419,7 +419,9 @@ Copyright © National Institute of Technology
         $('#profile_pic').toggle();
     });
     });
-    
+     $(document).ready(function(){
+    $('#content-wrapper').css('min-height',$(window).height()+'px');
+});
 </script>
 
 <script type="text/javascript">
@@ -501,7 +503,7 @@ Copyright © National Institute of Technology
       // input key handlers
 
       nameInput.addEventListener("keyup", function(e) {
-        nameInput.setCustomValidity(this.validity.patternMismatch ? usernameInput.title : "");
+        nameInput.setCustomValidity(this.validity.patternMismatch ? nameInput.title : "");
       }, false);
 
       emailInput.addEventListener("keyup", function(e) {
@@ -509,15 +511,15 @@ Copyright © National Institute of Technology
       }, false);
        
       phoneInput.addEventListener("keyup", function(e) {
-        this.setCustomValidity(this.validity.patternMismatch ? phoneInput.title : "");
+      phoneInput.setCustomValidity(this.validity.patternMismatch ? phoneInput.title : "");
       }, false);
 
       subjectInput.addEventListener("keyup", function(e) {
-        this.setCustomValidity(this.validity.patternMismatch ? subjectInput.title : "");
+      subjectInput.setCustomValidity(this.validity.patternMismatch ? subjectInput.title : "");
       }, false);
 
       messageInput.addEventListener("keyup", function(e) {
-        this.setCustomValidity(this.validity.patternMismatch ? messageInput.title : "");
+      messageInput.setCustomValidity(this.validity.patternMismatch ? messageInput.title : "");
       }, false);
 
     }

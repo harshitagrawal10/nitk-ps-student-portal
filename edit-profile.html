@@ -303,77 +303,80 @@ Components
 </div>-->
 <div class="step-content">
 <div class="step-pane active" id="step1">
-<form role="form">
+<form id="myForm" role="form">
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Name*</h5>
-		<input type='text' class="form-control" placeholder="Enter Name" pattern="[a-zA-Z ]+" required/>
+		<h5 for=""><b>Name*</b></h5>
+		<input type='text' class="form-control" placeholder="Enter Name" pattern="[a-zA-Z ]+" id="field_name" name="uname" title="Name must contain only letters" required/>
 	</div>
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Registration Number*</h5>
-		<input type='text' class="form-control" placeholder="Enter Registration Number" pattern="\d{6}" required/>
+		<h5 for=""><b>Registration Number*</b></h5>
+		<input type='text' class="form-control" placeholder="Enter Registration Number" id="field_registration_no" name="registration_no" title="Registration Number should contain only 6 digit without any space" pattern="\d{6}" value="162052" disabled/>
 	</div>
 	<!-- used the input type='text' to store roll no -->
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Roll No*</h5>
-		<input type='text' class="form-control" placeholder="Enter Roll Number" pattern="[a-zA-Z0-9 ]+" required/>
+		<h5 for=""><b>Roll No*</b></h5>
+		<input type='text' class="form-control" placeholder="Enter Roll No" id="field_roll_no" name="roll_no" title="Roll Number should contain only 6 digit without any space" pattern="[a-zA-Z0-9 ]+" value="16CA33" disabled/>
 	</div>
 
     <div class="form-group form-group-select2">
-		<h5>Programme*</h5>
-		<select style="width:300px" id="sel2" required>
-			<option value="India">MCA</option>
-			<option value="United States">B Tech</option>
-			<option value="United Kingdom">M Tech</option>
-			<option value="Afghanistan">Phd</option>
-			<option value="Albania">MBA</option>
-			<option value="Algeria">M Sc.</option>
-			<option value="American Samoa">M Tech. (Research)</option>
+		<h5><b>Programme*</b></h5>
+		<select style="width:300px" name="programme" required>
+		    <option value="0">Select</option>
+			<option value="MCA">MCA</option>
+			<option value="B Tech">B Tech</option>
+			<option value="M Tech">M Tech</option>
+			<option value="Phd">Phd</option>
+			<option value="MBA">MBA</option>
+			<option value="M Sc.">M Sc.</option>
+			<option value="M Tech.(Research)">M Tech.(Research)</option>
 		</select>
 	</div>
 
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Branch*</h5>
-		<input type='text' class="form-control" placeholder="Enter Branch" pattern="[a-zA-Z ]+" required/>
+		<h5 for=""><b>Branch*</b></h5>
+		<input type='text' class="form-control" placeholder="Enter Branch" id="field_branch" name="branch" title="Branch name must contain only letters" pattern="[a-zA-Z ]+" required/>
 	</div>
 
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Enterance Exam Rank*</h5>
-		<input type='text' class="form-control" placeholder="Enterance Exam Rank" pattern="[0-9]+" required/>
+		<h5 for=""><b>Entrance Exam Rank*</b></h5>
+		<input type='text' class="form-control" placeholder="Enterance Exam Rank" id="field_rank" name="rank" title="Enterance exam rank contains only number" pattern="[0-9]+" required/>
 	</div>
 	
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Date Of Birth*</h5>
-		<input type='date' id="field_date" class="form-control" placeholder="Date Of Birth" required/>
+		<h5 for=""><b>Date Of Birth*</b></h5>
+		<input type='date' id="field_date" class="form-control" placeholder="DD/MM/YYYY" id="field_dob" name="dob" title="DD/MM/YYYY" required/>
 	</div>
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Father's Name*</h5>
-		<input type='text' class="form-control" placeholder="Father's Name" pattern="[a-zA-Z ]+" required/>
+		<h5 for=""><b>Father's Name*</b></h5>
+		<input type='text' class="form-control" placeholder="Father's Name" id="field_father" name="father" title="Father name must contain only letters" pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">Mother's Name</h5>
-		<input type='text' class="form-control" placeholder="Mother's Name" pattern="[a-zA-Z ]+" />
+		<h5 for=""><b>Mother's Name*</b></h5>
+		<input type='text' class="form-control" placeholder="Mother's Name" id="field_mother" name="mother" title="Mother name must contain only letters"pattern="[a-zA-Z ]+" required/>
 	</div>
 	<div class="form-group">
-		<h5 for="exampleInputEmail1">E-Mail</h5>
-		<input type='email' class="form-control" placeholder="Enter E-Mail" required/>
+		<h5 for="exampleInputEmail1"><b>E-Mail*</b></h5>
+		<input type='email' class="form-control" placeholder="Enter E-Mail" id="field_email" name="email" title="username@xyz.xyz"required/>
 	</div>
 
 	<div class="form-inline form-group-select2">
 	<div class="row">
 	    <div class="col-lg-4">
-		<h5>Gender*</h5>
-		<select style="width:200px" id="sel2" required>
-			<option value="M" selected="selected">Male</option>
-			<option value="F">Female</option>
+		<h5><b>Gender*</b></h5>
+		<select style="width:200px" name="gender" required>
+		    <option value="0" selected="selected">Select</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
 		</select>
 		</div>
 	
 <!-- Add the options in backend -->
 	<!--<div class="form-group form-group-select2">-->
 	<div class="col-lg-4">
-		<h5>Nationality*</h5>
-		<select style="width:200px" id="sel2" required>
-			<option value="India" selected="selected">India</option>
+		<h5><b>Nationality*</b></h5>
+		<select style="width:200px" name="nationality" required>
+		    <option value="0" selected="selected">Select</option>
+			<option value="India">India</option>
 			<option value="United States">United States</option>
 			<option value="United Kingdom">United Kingdom</option>
 			<option value="Afghanistan">Afghanistan</option>
@@ -397,12 +400,13 @@ Components
 	
 	<!--<div class="form-group form-group-select2">-->
 	<div class="col-lg-4">
-		<h5>Category*</h5>
-		<select style="width:200px" id="sel2" required>
-			<option value="M" selected="selected">General</option>
-			<option value="F">Obc</option>
-			<option value="F">Sc</option>
-			<option value="F">St</option>
+		<h5><b>Category*</b></h5>
+		<select style="width:200px" name="category" required>
+		    <option value="0" selected="selected">Select</option>
+			<option value="General">General</option>
+			<option value="Obc">Obc</option>
+			<option value="Sc">Sc</option>
+			<option value="St">St</option>
 		</select>
 		</div>
 	</div>
@@ -411,13 +415,13 @@ Components
     <br>
 <!-- Address Part -->
 	<div class="form-group">
-		<h5 for="">Permanent Address*</h5>
-		<textarea class="form-control" id="field_Permanent_Address" rows="3" required></textarea>
+		<h5 for=""><b>Permanent Address*</b></h5>
+		<textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" required></textarea>
 	</div>
 
 	<div class="form-group">
-		<h5 for="">Corresponding Address*</h5>
-		<textarea class="form-control" id="field_Corresponding_address" rows="3" required></textarea>
+		<h5 for=""><b>Corresponding Address*</b></h5>
+		<textarea class="form-control" id="field_Corresponding_address" name="corresponding_address" rows="2" required></textarea>
 	</div>
 	<div class="form-group">
     <div class="checkbox-nice">
@@ -428,18 +432,18 @@ Components
     </div>
     </div>
 	<div class="form-group">
-		<h5>Pincode*</h5>
-		<input type="text" class="form-control" placeholder="Pincode" pattern="\d{6}" required/>
+		<h5><b>Pincode*</b></h5>
+		<input type="text" class="form-control" placeholder="Pincode" id="field_pincode" name="pincode" title="pincode should contain only 6 digit number without space" pattern="\d{6}" required/>
 	</div>
 
 	<div class="form-group">
-		<h5>Phone*</h5>
-		<input type="text" class="form-control" placeholder="Phone Number" pattern="\d{10}" required/>
+		<h5><b>Phone*</b></h5>
+		<input type="text" class="form-control" placeholder="Phone Number" id="field_phone" name="phone" title="phone number should contain only 10 digit without space" pattern="\d{10}" required/>
 	</div>
 	
 	<div class="form-group">
-		<h5>Alternative Phone</h5>
-		<input type="text" class="form-control" placeholder="Alternative Phone Number" pattern="\d{10}" //>
+		<h5><b>Alternative Phone</b></h5>
+		<input type="text" class="form-control" placeholder="Alternative Phone Number" id="field_alternative_phone" name="alternative_phone" title="phone number should contain only 10 digit without space"pattern="\d{10}" //>
 	</div>
     <div class="form-group">
 <div class="col-lg-10">
@@ -729,7 +733,248 @@ Copyright © National Institute of Technology
         $('#profile_pic').toggle();
     });
     });
+     $(document).ready(function(){
+    $('#content-wrapper').css('min-height',$(window).height()+'px');
+});
     
 </script>
+
+
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // JavaScript form validation
+
+    var checkForm = function(e)
+    {
+      if(this.uname.value == "") {
+        alert("Error: Name cannot be blank!");
+        this.uname.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      re= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if(!re.test(this.email.value)) {
+        alert("Error: Enter a valid Email Id!");
+        this.email.focus();
+        e.preventDefault();
+        return;
+      }
+      re =  /^[a-zA-Z ]{2,30}$/;
+      if(!re.test(this.uname.value)) {
+        alert("Error: Name must contain only letters");
+        this.uname.focus();
+        e.preventDefault();
+        return;
+      }
+      re =  /^[a-zA-Z ]{2,30}$/;
+      if(!re.test(this.father.value)) {
+        alert("Error: Father name must contain only letters");
+        this.father.focus();
+        e.preventDefault();
+        return;
+      }
+      re =  /^[a-zA-Z ]{2,30}$/;
+      if(!re.test(this.mother.value)) {
+        alert("Error: Mother name must contain only letters");
+        this.mother.focus();
+        e.preventDefault();
+        return;
+      }
+      re =  /^[a-zA-Z ]{2,20}$/;
+      if(!re.test(this.branch.value)) {
+        alert("Error: Branch name must contain only letters");
+        this.branch.focus();
+        e.preventDefault();
+        return;
+      }
+      if(this.programme.value == "0") {
+        alert("Error: Select Programme.");
+        this.programme.focus();
+        e.preventDefault();
+        return;
+      }
+      if(this.gender.value == "0") {
+        alert("Error: Select Gender.");
+        this.gender.focus();
+        e.preventDefault();
+        return;
+      }
+      if(this.nationality.value == "0") {
+        alert("Error: Select Nationality.");
+        this.nationality.focus();
+        e.preventDefault();
+        return;
+      }
+      if(this.category.value == "0") {
+        alert("Error: Select Category.");
+        this.category.focus();
+        e.preventDefault();
+        return;
+      }
+      re =  /^(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
+      if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
+      if(!re.test(this.dob.value)) {
+        alert("Error: Enter a valid Date of birth dd/mm/yyyy ");
+        this.dob.focus();
+        e.preventDefault();
+        return;
+      }}
+      re= /^\d{10}$/;
+      if(!re.test(this.phone.value)) {
+        alert("Error: Enter valid 10 digit Phone No. without space!");
+        this.phone.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      re= /^\d{10}$/;
+      if(this.alternative_phone.value != ""){
+      if(!re.test(this.alternative_phone.value)) {
+        alert("Error: Enter valid 10 digit Phone No. without space!");
+        this.alternative_phone.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }}
+      re= /^\d{6}$/;
+      if(!re.test(this.pincode.value)) {
+        alert("Error: Enter valid six digit pincode without space!");
+        this.pincode.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      re= /^[0-9]{1,6}$/;
+      if(!re.test(this.rank.value)) {
+        alert("Error: Enter valid rank score in Entrance exam! Ex: B.Tech-JEE,MCA-NIMCET");
+        this.rank.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      if(this.permanent_address.value == "") {
+        alert("Error: Permanent address cannot be blank!");
+        this.permanent_address.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      if(this.corresponding_address.value == "") {
+        alert("Error: Corresponding address cannot be blank!");
+        this.corresponding_address.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+    };
+
+   var myForm = document.getElementById("myForm");
+    myForm.addEventListener("submit", checkForm, true);
+
+    // HTML5 form validation
+
+   /*var supports_input_validity = function()
+    {
+      var i = document.createElement("input");
+      return "setCustomValidity" in i;
+    }
+
+    if(supports_input_validity()) {
+      //var nameInput = document.getElementById("field_name");
+      //nameInput.setCustomValidity(nameInput.title);
+
+      var registrationInput = document.getElementById("field_registration_no");
+      registrationInput.setCustomValidity(registrationInput.title);
+
+      var rollInput = document.getElementById("field_roll_no");
+      rollInput.setCustomValidity(rollInput.title);
+
+      var branchInput = document.getElementById("field_branch");
+      branchInput.setCustomValidity(branchInput.title);
+      
+      var rankInput = document.getElementById("field_rank");
+      rankInput.setCustomValidity(rankInput.title);
+
+      var dobInput = document.getElementById("field_dob");
+      dobInput.setCustomValidity(dobInput.title);
+
+      var fatherInput = document.getElementById("field_father");
+      fatherInput.setCustomValidity(fatherInput.title);
+
+      var motherInput = document.getElementById("field_mother");
+      motherInput.setCustomValidity(motherInput.title);
+
+      var emailInput = document.getElementById("field_email");
+      emailInput.setCustomValidity(emailInput.title);
+
+      var permanentInput = document.getElementById("field_Permanent_Address");
+      permanentInput.setCustomValidity(permanentInput.title);
+
+      var correspondingInput = document.getElementById("field_Corresponding_address");
+      correspondingInput.setCustomValidity(correspondingInput.title);
+
+      var pinInput = document.getElementById("field_pincode");
+      pinInput.setCustomValidity(pinInput.title);
+
+      var phoneInput = document.getElementById("field_phone");
+      phoneInput.setCustomValidity(phoneInput.title);
+
+      // input key handlers
+
+      nameInput.addEventListener("keyup", function(e) {
+      nameInput.setCustomValidity(this.validity.patternMismatch ? nameInput.title : "");
+     }, false);
+
+      registrationInput.addEventListener("keyup", function(e) {
+      registrationInput.setCustomValidity(this.validity.patternMismatch ? registrationInput.title : "");
+     }, false);
+
+     rollInput.addEventListener("keyup", function(e) {
+      rollInput.setCustomValidity(this.validity.patternMismatch ? rollInput.title : "");
+     }, false);
+
+     branchInput.addEventListener("keyup", function(e) {
+      branchInput.setCustomValidity(this.validity.patternMismatch ? branchInput.title : "");
+     }, false);
+
+     rankInput.addEventListener("keyup", function(e) {
+      rankInput.setCustomValidity(this.validity.patternMismatch ? rankInput.title : "");
+     }, false);
+
+      dobInput.addEventListener("keyup", function(e) {
+      dobInput.setCustomValidity(this.validity.patternMismatch ? dobInput.title : "");
+     }, false);
+
+      fatherInput.addEventListener("keyup", function(e) {
+      fatherInput.setCustomValidity(this.validity.patternMismatch ? fatherInput.title : "");
+     }, false);
+
+     motherInput.addEventListener("keyup", function(e) {
+      motherInput.setCustomValidity(this.validity.patternMismatch ? motherInput.title : "");
+     }, false);
+
+      emailInput.addEventListener("keyup", function(e) {
+        emailInput.setCustomValidity(this.validity.patternMismatch ? emailInput.title : "");
+      }, false);
+
+      permanentInput.addEventListener("keyup", function(e) {
+        permanentInput.setCustomValidity(this.validity.patternMismatch ? permanentInput.title : "");
+      }, false);
+
+      correspondingInput.addEventListener("keyup", function(e) {
+      correspondingInput.setCustomValidity(this.validity.patternMismatch ? correspondingInput.title : "");
+      }, false);
+
+      pinInput.addEventListener("keyup", function(e) {
+      pinInput.setCustomValidity(this.validity.patternMismatch ? pinInput.title : "");
+      }, false);
+       
+      phoneInput.addEventListener("keyup", function(e) {
+      phoneInput.setCustomValidity(this.validity.patternMismatch ? phoneInput.title : "");
+      }, false);
+
+    }*/
+
+  }, false);
+
+</script>
+
+
 </body>
 </html>

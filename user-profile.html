@@ -297,11 +297,11 @@ Edit Profile
 <div class="col-lg-9 col-md-8 col-sm-8">
 <div class="main-box clearfix">
 <div class="tabs-wrapper profile-tabs">
-<ul class="nav nav-tabs">
+<!--<ul class="nav nav-tabs">
 <li class="active"><a href="#tab-newsfeed" data-toggle="tab">Personal</a></li>
 <li><a href="#tab-activity" data-toggle="tab">Academics</a></li>
 <li><a href="#tab-friends" data-toggle="tab">Additional</a></li>
-</ul>
+</ul>-->
 <div class="tab-content">
 <div class="tab-pane fade in active" id="tab-newsfeed">
 <div id="newsfeed">
@@ -412,6 +412,42 @@ Mother Name:
 </th>
 <th class="text-right fstyle">
 Kusum Agrawal
+<i class="fa fa-user"></i>
+</th>
+</tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-6">
+<div>
+<table class="table">
+<tbody>
+<tr>
+<th>
+Entrance Exam Rank:
+</th>
+<th class="text-right fstyle">
+112
+<i class="fa fa-slack"></i>
+</th>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div>
+<table class="table">
+<tr>
+<th>
+Category:
+</th>
+<th class="text-right fstyle">
+General
 <i class="fa fa-user"></i>
 </th>
 </tr>
@@ -690,7 +726,9 @@ Copyright © National Institute of Technology
         $('#profile_pic').toggle();
     });
     });
-    
+     $(document).ready(function(){
+    $('#content-wrapper').css('min-height',$(window).height()+'px');
+});
 </script>
 
 </body>

@@ -282,7 +282,7 @@ Components
 <h2></h2>
 </header>
 <div class="main-box-body clearfix">
-<div>
+<div id="table_mybatch">
 <table id="table-example" class="table table-hover">
 <thead>
 <tr>
@@ -297,7 +297,7 @@ Components
 <tbody>
 <tr>
 <td>1</td>
-<td><img src="img/samples/hk.jpg" alt=""/></td>
+<td><img src="img/samples/hk.jpg" alt="profile pic" class="img-rounded" style="height:80px;width:80px"/></td>
 <td><b>16CA33</b></td>
 <td><b>Harshit Kumar Agrawal</b></td>
 <td><b>Company Name<b></td>
@@ -483,13 +483,21 @@ Copyright © National Institute of Technology
     });
     });
 
-	$(document).ready(function() {
+	  $(document).ready(function() {
 		var table = $('#table-example').dataTable({
-			'info': false,
-		
-			
+			'info': false,	
 		});
-	});
+	  });
+
+    $(document).ready(function(){
+    $('#content-wrapper').css('min-height',$(window).height()+'px');
+    });
+
+    $(window).resize(function() {
+    if (($(window).width() <= 1024) &&($(window).height() <= 768))
+    {
+     $('#table_mybatch').addClass('table-responsive');
+    }});
 	</script>
 </body>
 </html>

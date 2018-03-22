@@ -283,7 +283,7 @@ Components
 <h2></h2>
 </header>
 <div class="main-box-body clearfix">
-<div>
+<div id="table_company">
 <table id="table-example" class="table table-hover">
 <thead>
 <tr>
@@ -449,6 +449,16 @@ Copyright © National Institute of Technology
         $('#profile_pic').toggle();
     });
     });
+
+    $(document).ready(function(){
+    $('#content-wrapper').css('min-height',$(window).height()+'px');
+    });
+
+    $(window).resize(function() {
+    if (($(window).width() <= 1024) &&($(window).height() <= 768))
+    {
+     $('#table_company').addClass('table-responsive');
+    }});
 	</script>
 </body>
 </html>

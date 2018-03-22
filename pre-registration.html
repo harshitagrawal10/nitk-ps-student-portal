@@ -284,7 +284,7 @@ Components
 <hr>
 </header>
 <div class="main-box-body clearfix">
-<div>
+<div id="table_open">
 <table id="table-example" class="table table-hover">
 <thead>
 <tr>
@@ -375,7 +375,7 @@ Components
 <hr>
 </header>
 <div class="main-box-body clearfix">
-<div>
+<div id="table_pre">
 <table id="table-example-1" class="table table-hover">
 <thead>
 <tr>
@@ -548,6 +548,23 @@ Copyright © National Institute of Technology
         $('#profile_pic').toggle();
     });
     });
+
+     $(document).ready(function(){
+    $('#content-wrapper').css('min-height',$(window).height()+'px');
+    });
+
+    $(window).resize(function() {
+    if (($(window).width() <= 1024) &&($(window).height() <= 768))
+    {
+     $('#table_open').addClass('table-responsive');
+    }});
+
+
+    $(window).resize(function() {
+    if (($(window).width() <= 1024) &&($(window).height() <= 768))
+    {
+     $('#table_pre').addClass('table-responsive');
+    }});
 	</script>
 
 </body>
