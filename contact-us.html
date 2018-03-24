@@ -33,6 +33,7 @@
 <body>
 
 
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -49,9 +50,9 @@ Upload Profile Picture
               <li>Upload a clear scanned/photographed coloured passport size profile picture. Ensure that plain background in image.</li>
               <li>Ensure that 70% of the profile picture filled with your face.</li>
               <li>Only jpg, png and gif format images are allowed.</li>
-              <li>Please note that maximum allowed file size is <strong>4 MB (4096 KB)</strong> for others.
+              <li>Please note that maximum allowed file size is <strong>1 MB (1024 KB)</strong> for others.
               </li>
-              <li>##NOTE: The images should be cropped later in 9:7 ratio (passport size)##</li>
+              <li>##NOTE:Height and Width must not exceed 200px##</li>
               <li>Students must upload the profile picture carefully, it may appear in some very important documents.</li>
               <li>
                 <i>How to resize image if it exceed maximum dimensions? Or How to reduce image size?</i>
@@ -59,20 +60,18 @@ Upload Profile Picture
               </li>
               <!-- <li><a href="#" target="_blank">Click here</a> for help & support to upload your profile picture on student portal.</li> -->
 </ul>
-<form role="form">
-<div class="form-inline form-inline-box">
+<form id="myForm" class="form-inline form-inline-box" role="form">
 <div class="form-group">
-<input type="" class="form-control" id="" placeholder="Choose File">
+<input type="file" id="fileUpload" />
 </div>
-<button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Upload image</button>
+<div class="form-group">
+<input id="upload" type="button" value="Upload" />
 </div>
 </form>
 </div>
 </div> 
 </div> 
 </div> 
-
-
 
 
 <div id="theme-wrapper">
@@ -411,6 +410,9 @@ Copyright © National Institute of Technology
 <script src="js/morris.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/pace.min.js"></script>
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/image.js"></script>
 
 <script>
   
