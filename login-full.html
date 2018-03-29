@@ -42,14 +42,14 @@
 </div>
 </header>
 <div id="login-box-inner">
-<form role="form" action="index.html">
+<form id="myForm" role="form">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-<input class="form-control" type="text" placeholder="Email address">
+<input class="form-control" type="text" placeholder="Username"  pattern="[a-zA-Z0-9 ]+" id="field_username" name="username" title="Username(Roll Number) should contain only 6 digit without any space" required>
 </div>
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-key"></i></span>
-<input type="password" class="form-control" placeholder="Password">
+<input id="field_pwd" class="form-control"  placeholder="Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required  name="pwd">
 </div>
 <div id="remember-me-wrapper">
 <div class="row">
@@ -140,6 +140,48 @@ Forgot password?
  
  
 <script src="js/scripts.js"></script>
+
+<script type="text/javascript">
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // JavaScript form validation
+
+    var checkForm = function(e)
+    {
+      if(this.username.value == "") {
+        alert("Error: Enter your Username(Roll No.)!");
+        this.username.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      re =  /^[a-zA-Z0-9 ]{6,6}$/;
+      if(!re.test(this.username.value)) {
+        alert("Error: Username(Roll Number) should contain only 6 digit without any space");
+        this.username.focus();
+        e.preventDefault();
+        return;
+      }
+      if(this.pwd.value == "") {
+        alert("Error: Enter your password!");
+        this.pwd.focus();
+        e.preventDefault(); // equivalent to return false
+        return;
+      }
+      re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+      if(!re.test(this.pwd.value)) {
+        alert("Error: Password must contain at least 6 characters, including UPPER/lowercase and numbers.");
+        this.pwd.focus();
+        e.preventDefault();
+        return;
+      }
+    };
+
+    var myForm = document.getElementById("myForm");
+    myForm.addEventListener("submit", checkForm, true);
+  }, false);
+
+</script>
  
 </body>
 </html>
