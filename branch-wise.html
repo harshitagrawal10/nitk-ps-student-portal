@@ -28,8 +28,20 @@
 		<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	
+<script src="https://d3js.org/d3.v3.min.js"></script>
+    <style>
+.theadd
+{
+  background-color:#2c3e50;
+}
+td
+{
+  text-align:center;
+}
+</style>
 </head>
+
+
 <body>
 
 
@@ -120,7 +132,7 @@ Upload Profile Picture
 <div id="nav-col">
 <section id="col-left" class="col-left-nano">
 <div id="col-left-inner" class="col-left-nano-content">
-<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img id="profile_pic" alt="Profile Pic" class="img-circle hidden-sm hidden-xs profile_pic" src="img/samples/hk.jpg"/></a>
+<a data-toggle="modal" href="#myModal" class="mrg-b-lg"><img id="profile_pic" alt="Profile Pic" class="img-circle hidden-sm hidden-xs profile_pic" src="img/samples/hk.jpg" style="height:120px;width:100px"/></a>
 <div id="user-left-box" style="padding-top:0px;" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
 <div class="user-box">
 <span class="name">
@@ -283,31 +295,297 @@ Components
 <h2>Placement Statistics</h2>
 </header>
 <div class="main-box-body clearfix">
-
+<div id="main">
+      <div id="sequence"></div>
+      <div id="chart">
+        <div id="explanation" style="visibility: hidden;">
+          <span id="percentage"></span><br/>
+          of visits begin with this sequence of pages
+        </div>
+      </div>
+    </div>
+    <div id="sidebar">
+      <input type="checkbox" id="togglelegend"> Legend<br/>
+      <div id="legend" style="visibility: hidden;"></div>
+    </div>
 </div>
 </div>
 </div>
 <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
-<div class="main-box">
+<div class="main-box" style="overflow: auto; max-height: 500px;">
 <header class="main-box-header clearfix">
 <h2>Branch-Wise Statistics</h2>
 </header>
-<div class="main-box-body clearfix">
+<div class="main-box-body clearfix" >
 <form class="form-inline" role="form">
 <div class="form-group form-group-select2">
 <lable>Branch:&nbsp;</lable>
-		<select style="width:300px" id="sel2">
-			<option value="India" selected="selected">MCA</option>
-			<option value="United States">B Tech</option>
-			<option value="United Kingdom">M Tech</option>
-			<option value="Afghanistan">Phd</option>
-			<option value="Albania">MBA</option>
-			<option value="Algeria">M Sc.</option>
-			<option value="American Samoa">M Tech. (Research)</option>
+		<select style="width:250px" id="sel1">
+      <option value="0" selected="selected">Select</option>
+			<option value="MCA">MCA</option>
+			<option value="B Tech">B Tech</option>
+			<option value="M Tech">M Tech</option>
+			<option value="Phd">Phd</option>
+			<option value="MBA">MBA</option>
+			<option value="M Sc.">M Sc.</option>
+			<option value="M Tech. (Research)">M Tech. (Research)</option>
 		</select>
 	</div>
-<button type="submit" class="btn btn-success">Submit</button>	
+<button type="submit" id="btn1" class="btn btn-primary">Submit</button>	
 </form>
+<hr>
+<div class="table-responsive" id="table_branch">
+<table class="table table-striped">
+<thead>
+<tr>
+<th class="text-center btn-primary"><span>Branch</span></th>
+<th class="text-center btn-primary"><span>Total Students</span></th>
+<th class="text-center btn-primary"><span>Placed</span></th>
+<th class="text-center btn-primary"><span>Yet To Be Placed</span></th>
+<th class="text-center btn-primary"><span>%Placed</span></th>
+</tr>
+</thead>
+<tbody>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span style="color:white;">UG(B.Tech)</span></th>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span></span></th>
+<tr>
+<td>
+Civil
+</td>
+<td>
+91
+</td>
+<td>
+56
+</td>
+<td>
+35
+</td>
+<td>
+55.6%
+</td>
+</tr>
+<tr>
+<td>
+Civil
+</td>
+<td>
+91
+</td>
+<td>
+56
+</td>
+<td>
+35
+</td>
+<td>
+55.6%
+</td>
+</tr>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span style="color:white;">PG(M.Tech)</span></th>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span></span></th>
+<tr>
+<td>
+Civil
+</td>
+<td>
+91
+</td>
+<td>
+56
+</td>
+<td>
+35
+</td>
+<td>
+55.6%
+</td>
+</tr>
+<tr>
+<td>
+Civil
+</td>
+<td>
+91
+</td>
+<td>
+56
+</td>
+<td>
+35
+</td>
+<td>
+55.6%
+</td>
+</tr>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span style="color:white;">PG</span></th>
+<th class="text-center theadd"><span></span></th>
+<th class="text-center theadd"><span></span></th>
+<tr>
+<td>
+Civil
+</td>
+<td>
+91
+</td>
+<td>
+56
+</td>
+<td>
+35
+</td>
+<td>
+55.6%
+</td>
+</tr>
+<tr>
+<td>
+Civil
+</td>
+<td>
+91
+</td>
+<td>
+56
+</td>
+<td>
+35
+</td>
+<td>
+55.6%
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="table_mybatch" hidden>
+<table id="table_example" class="table table-hover">
+<thead>
+<tr>
+<th>Sr No.</th>
+<th>Profile Pic.</th>
+<th>Roll No.</th>
+<th>Name</th>
+<th>Intern At</th>
+<th>Placed In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><img src="img/samples/hk.jpg" alt="profile pic" class="img-rounded" style="height:80px;width:80px"/></td>
+<td><b>16CA33</b></td>
+<td><b>Harshit Kumar Agrawal</b></td>
+<td><b>Company Name<b></td>
+<td><b>Placed</b></td>
+</tr>
+<tr>
+<td>2</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA67</td>
+<td>Mayank Tripathi</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>3</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA92</td>
+<td>Pankaj Chaudhary</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+<tr>
+<td>4</td>
+<td><img src="img/samples/ipad.png" alt=""/></td>
+<td>16CA19</td>
+<td>Nishant</td>
+<td><b>Company Name<b></td>
+<td>Placed</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -397,19 +675,40 @@ Copyright © National Institute of Technology
 <script src="js/scripts.js"></script>
 <script src="js/pace.min.js"></script>
 
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="js/image.js"></script>
 
 <script>
   
-    $(document).ready(function(){
+   $(document).ready(function(){
     $('#make-small-nav').click(function(){
         $('#profile_pic').toggle();
     });
     });
-     $(document).ready(function(){
+
+    $(document).ready(function() {
+    var table = $('#table_example').dataTable({
+      'info': false,  
+    });
+    });
+
+    $(document).ready(function(){
     $('#content-wrapper').css('min-height',$(window).height()+'px');
+    });
+
+    $(window).resize(function() {
+    if (($(window).width() <= 1024) &&($(window).height() <= 768))
+    {
+     $('#table_mybatch').addClass('table-responsive');
+    }});
+
+    $("#btn1").click(function(){
+    if($("#sel1").val()!=0)
+      {
+         $("#table_branch").hide();
+          $("#table_mybatch").removeAttr('hidden');
+      }
 });
-</script>
+  </script>
+
 </body>
 </html>
