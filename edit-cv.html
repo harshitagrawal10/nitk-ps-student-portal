@@ -544,55 +544,6 @@ Copyright © National Institute of Technology
 </div>
 
  
-<div class="modal fade" id="current" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header btn-primary">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title" style="text-align:center;color:#fff;"><b>Current Course Details</b></h4>
-</div>
-<div class="modal-body">
-<form role="form">
-<div class="form-group">
-<label for="exampleInputEmail1"><b>Course*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex-M Tech" disabled>
-</div>
-<div class="form-group">
-<label for="exampleInputPassword1"><b>Branch*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex-Civil" disabled>
-</div>
-<div class="form-group">
-<label for="exampleInputPassword1"><b>Specialization*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex-STRUCTURAL ENGG." disabled>
-</div>
-<div class="form-group">
-<label for="exampleInputPassword1"><b>CGPA*</b></label>
-<input type="text" class="form-control" id="" placeholder="CGPA">
-</div>
-<div class="form-group">
-<label for=""><b>Current Semester:*</b></label>
-<select class="form-control">
-<option value="0" >Select</option>
-<option value="1" >1</option>
-<option value="2" >2</option>
-<option value="3" >3</option>
-<option value="4" >4</option>
-<option value="5" >5</option>
-<option value="6" >6</option>
-<option value="7" >7</option>
-<option value="8" >8</option>
-</select>
-</div>
-</form>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
-</div>
-</div> 
-</div> 
-</div> 
-
  
 <div class="modal fade" id="Graduation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
@@ -662,7 +613,6 @@ Copyright © National Institute of Technology
 </div> 
 </div> 
 </div> 
-
 
 <div class="modal fade" id="X" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog">
@@ -848,19 +798,19 @@ Copyright © National Institute of Technology
 <form role="form">
 <div class="form-group">
 <label for="exampleInputEmail1"><b>College*</b></label>
-<input type="text" class="form-control" id="" placeholder="College Name">
+<input type="text" class="form-control" id="" placeholder="College Name" pattern="[a-zA-Z ]+" title="Enter Valid College Name" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Start Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="Start Year">
+<input type="text" class="form-control" id="" placeholder="Start Year" pattern="\d{4}" title="Enter Valid Year" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>End Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="End Year">
+<input type="text" class="form-control" id="" placeholder="End Year" pattern="\d{4}" title="Enter Valid Year" required>
 </div>
 </div>
 </div>
@@ -868,13 +818,13 @@ Copyright © National Institute of Technology
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Degree*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:M.Sc(Hons.)">
+<input type="text" class="form-control" id="" placeholder="Ex:M.Sc(Hons.)" pattern="[a-zA-Z ]+" title="Enter Valid Degree Name" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Stream</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:Chemistry">
+<input type="text" class="form-control" id="" placeholder="Ex:Chemistry" pattern="[a-zA-Z ]+" title="Enter Valid Stream Name" required>
 </div>
 </div>
 </div>
@@ -883,7 +833,8 @@ Copyright © National Institute of Technology
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Performance Scale:*</b></label>
-<select class="form-control">
+<select class="form-control" id="pgra">
+<option value="0">Select</option>
 <option>Percentage</option>
 <option>CGPA</option>
 </select>
@@ -892,7 +843,7 @@ Copyright © National Institute of Technology
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Performance*</b></label>
-<input type="text" class="form-control" id="" placeholder="0.00">
+<input type="text" class="form-control" id="" placeholder="0.00" pattern="\d{4}" title="Enter Valid Year" required>
 </div>
 </div>
 </div>
@@ -900,7 +851,7 @@ Copyright © National Institute of Technology
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="button" class="btn btn-primary" id="pgrabut"><b>Save changes</b></button>
 </div>
 </div> 
 </div> 
@@ -1039,6 +990,113 @@ Copyright © National Institute of Technology
 </div> 
 </div> 
 
+
+
+<div class="modal fade" id="current" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header btn-primary">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" style="text-align:center;color:#fff;"><b>Current Course Details</b></h4>
+</div>
+<div class="modal-body">
+<form role="form">
+<div class="form-group">
+<label for="exampleInputEmail1"><b>Course*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex-M Tech" disabled>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>Branch*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex-Civil" disabled>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>Specialization*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex-STRUCTURAL ENGG." disabled>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>CGPA*</b></label>
+<input type="text" class="form-control" id="" placeholder="CGPA">
+</div>
+<div class="form-group">
+<label for=""><b>Current Semester:*</b></label>
+<select class="form-control" id="sel_sem">
+<option value="0" >Select</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+</select>
+</div>
+<div id="sgpa" hidden>
+<label for=""><b>SGPA*</b></label>
+<div class="row">
+<div class="col-lg-3" id="sem1" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>1<sup>st</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+<div class="col-lg-3" id="sem2" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>2<sup>nd</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+<div class="col-lg-3" id="sem3" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>3<sup>rd</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+<div class="col-lg-3" id="sem4" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>4<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3" id="sem5" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>5<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+<div class="col-lg-3" id="sem6" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>6<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+<div class="col-lg-3" id="sem7" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>7<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+<div class="col-lg-3" id="sem8" hidden>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>8<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="" placeholder="SGPA">
+</div>
+</div>
+</div>
+<div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+</div>
+</div> 
+</div> 
+</div> 
+
+
 <script src="js/demo-skin-changer.js"></script>  
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -1077,6 +1135,123 @@ Copyright © National Institute of Technology
      $(document).ready(function(){
     $('#content-wrapper').css('min-height' ,$(window).height()+'px');
     });
+
+     /* $(document).ready(function(){
+    $(function () {
+        $("#pgrabut").click(function () {
+            var pgrad = $("#pgra").val();
+            if (pgrad == "0" ) {
+                alert("Select Performance Scale.");
+                $("#pgra").focus();
+                return false;
+            }
+            return true;
+        });
+    });
+    });*/
+
+     $("#sel_sem").click(function(){
+      if($("#sel_sem").val()=="0")
+      {
+          $("#sgpa").hide();
+      }else
+      if($("#sel_sem").val()=="1")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").hide();
+          $("#sem3").hide();
+          $("#sem4").hide();
+          $("#sem5").hide();
+          $("#sem6").hide();
+          $("#sem7").hide();
+          $("#sem8").hide();
+      }else
+      if($("#sel_sem").val()=="2")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").hide();
+          $("#sem4").hide();
+          $("#sem5").hide();
+          $("#sem6").hide();
+          $("#sem7").hide();
+          $("#sem8").hide();
+      }else
+      if($("#sel_sem").val()=="3")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").show();
+          $("#sem4").hide();
+          $("#sem5").hide();
+          $("#sem6").hide();
+          $("#sem7").hide();
+          $("#sem8").hide();
+      }else
+       if($("#sel_sem").val()=="4")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").show();
+          $("#sem4").show();
+          $("#sem5").hide();
+          $("#sem6").hide();
+          $("#sem7").hide();
+          $("#sem8").hide();
+      }else
+      if($("#sel_sem").val()=="5")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").show();
+          $("#sem4").show();
+          $("#sem5").show();
+          $("#sem6").hide();
+          $("#sem7").hide();
+          $("#sem8").hide();
+      }else
+      if($("#sel_sem").val()=="6")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").show();
+          $("#sem4").show();
+          $("#sem5").show();
+          $("#sem6").show();
+          $("#sem7").hide();
+          $("#sem8").hide();
+      }else
+      if($("#sel_sem").val()=="7")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").show();
+          $("#sem4").show();
+          $("#sem5").show();
+          $("#sem6").show();
+          $("#sem7").show();
+          $("#sem8").hide();
+      }else
+      if($("#sel_sem").val()=="8")
+      {
+          $("#sgpa").show();
+          $("#sem1").show();
+          $("#sem2").show();
+          $("#sem3").show();
+          $("#sem4").show();
+          $("#sem5").show();
+          $("#sem6").show();
+          $("#sem7").show();
+          $("#sem8").show();
+      }
+  });
 </script>
 
 <script>

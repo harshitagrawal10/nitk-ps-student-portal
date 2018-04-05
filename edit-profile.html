@@ -323,7 +323,7 @@ Components
 		<select style="width:200px" name="programme" id="field_programme" required>
 		    <option value="0">Select</option>
 			<option value="MCA">MCA</option>
-			<option value="B Tech">B Tech</option>
+			<option value="B Tech" selected>B Tech</option>
 			<option value="M Tech">M Tech</option>
 			<option value="Phd">Phd</option>
 			<option value="MBA">MBA</option>
@@ -333,7 +333,7 @@ Components
 	</div>
 	    <div class="col-lg-4" id="field_branch" hidden>
 		<h5><b>Programme*</b></h5>
-		<select style="width:200px" name="programme" id="field_programme" required>
+		<select style="width:200px" name="programme" id="fbranch" required>
 		    <option value="0">Select</option>
 			<option value="MCA">MCA</option>
 			<option value="B Tech">B Tech</option>
@@ -346,7 +346,7 @@ Components
 	</div>
 	    <div class="col-lg-4" id="field_subbranch" hidden>
 		<h5><b>Programme*</b></h5>
-		<select style="width:200px" name="programme" id="field_programme" required>
+		<select style="width:200px" name="programme" id="fsbranch" required>
 		    <option value="0">Select</option>
 			<option value="MCA">MCA</option>
 			<option value="B Tech">B Tech</option>
@@ -386,7 +386,7 @@ Components
 	<div class="row">
 	    <div class="col-lg-4">
 		<h5><b>Gender*</b></h5>
-		<select style="width:200px" name="gender" required>
+		<select style="width:200px" id="gender" required>
 		    <option value="0" selected="selected">Select</option>
 			<option value="Male">Male</option>
 			<option value="Female">Female</option>
@@ -397,7 +397,7 @@ Components
 	<!--<div class="form-group form-group-select2">-->
 	<div class="col-lg-4">
 		<h5><b>Nationality*</b></h5>
-		<select style="width:200px" name="nationality" required>
+		<select style="width:200px" id="nationality" required>
 		    <option value="0" selected="selected">Select</option>
 			<option value="India">India</option>
 			<option value="United States">United States</option>
@@ -424,7 +424,7 @@ Components
 	<!--<div class="form-group form-group-select2">-->
 	<div class="col-lg-4">
 		<h5><b>Category*</b></h5>
-		<select style="width:200px" name="category" required>
+		<select style="width:200px" id="category" required>
 		    <option value="0" selected="selected">Select</option>
 			<option value="General">General</option>
 			<option value="Obc">Obc</option>
@@ -470,7 +470,7 @@ Components
 	</div>
     <div class="form-group">
 <div class="col-lg-10">
-<button type="submit" class="btn btn-success">Submit</button>
+<button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
 </div>
 </div>
 </form>
@@ -763,6 +763,16 @@ Copyright © National Institute of Technology
     $('#content-wrapper').css('min-height',$(window).height()+'px');
 });
     
+    $(document).ready(function(){
+     if($("#field_programme").val()=="B Tech" || $("#field_programme").val()=="M Tech")
+      {
+          $("#field_branch").show();
+      }else
+      {
+      	$("#field_branch").hide();
+      }
+});
+
     $("#field_programme").click(function(){
     if($("#field_programme").val()=="B Tech" || $("#field_programme").val()=="M Tech")
       {
@@ -781,245 +791,46 @@ Copyright © National Institute of Technology
       	$("#field_subbranch").hide();
       }
   });
+
+   $(document).ready(function(){
+    $(function () {
+        $("#btnSubmit").click(function () {
+            var gen = $("#gender").val();
+            var nat = $("#nationality").val();
+            var cat = $("#category").val();
+            var pro = $("#field_programme").val();
+            var branch = $("#fbranch").val();
+            if (gen == "0") {
+                alert("Select Gender.");
+                $("#gender").focus();
+                return false;
+            }
+            if (nat == "0") {
+                alert("Select Nationality.");
+                $("#nationality").focus();
+                return false;
+            }
+            if (cat == "0") {
+                alert("Select Category.");
+                $("#category").focus();
+                return false;
+            }
+            if (pro == "0") {
+                alert("Select Programme.");
+                $("#category").focus();
+                return false;
+            }
+            if(pro == "B Tech" || pro =="M Tech"){
+            if (branch == "0") {
+                alert("Select Branch.");
+                $("#category").focus();
+                return false;
+            }}
+            return true;
+        });
+    });
+    });
     
 </script>
-
-
-<script type="text/javascript">
-
-  document.addEventListener("DOMContentLoaded", function() {
-
-    // JavaScript form validation
-
-    var checkForm = function(e)
-    {
-      if(this.uname.value == "") {
-        alert("Error: Name cannot be blank!");
-        this.uname.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-      re= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-      if(!re.test(this.email.value)) {
-        alert("Error: Enter a valid Email Id!");
-        this.email.focus();
-        e.preventDefault();
-        return;
-      }
-      re =  /^[a-zA-Z ]{2,30}$/;
-      if(!re.test(this.uname.value)) {
-        alert("Error: Name must contain only letters");
-        this.uname.focus();
-        e.preventDefault();
-        return;
-      }
-      re =  /^[a-zA-Z ]{2,30}$/;
-      if(!re.test(this.father.value)) {
-        alert("Error: Father name must contain only letters");
-        this.father.focus();
-        e.preventDefault();
-        return;
-      }
-      re =  /^[a-zA-Z ]{2,30}$/;
-      if(!re.test(this.mother.value)) {
-        alert("Error: Mother name must contain only letters");
-        this.mother.focus();
-        e.preventDefault();
-        return;
-      }
-      re =  /^[a-zA-Z ]{2,20}$/;
-      if(!re.test(this.branch.value)) {
-        alert("Error: Branch name must contain only letters");
-        this.branch.focus();
-        e.preventDefault();
-        return;
-      }
-      if(this.programme.value == "0") {
-        alert("Error: Select Programme.");
-        this.programme.focus();
-        e.preventDefault();
-        return;
-      }
-      if(this.gender.value == "0") {
-        alert("Error: Select Gender.");
-        this.gender.focus();
-        e.preventDefault();
-        return;
-      }
-      if(this.nationality.value == "0") {
-        alert("Error: Select Nationality.");
-        this.nationality.focus();
-        e.preventDefault();
-        return;
-      }
-      if(this.category.value == "0") {
-        alert("Error: Select Category.");
-        this.category.focus();
-        e.preventDefault();
-        return;
-      }
-      re =  /^(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/;
-      if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
-      if(!re.test(this.dob.value)) {
-        alert("Error: Enter a valid Date of birth dd/mm/yyyy ");
-        this.dob.focus();
-        e.preventDefault();
-        return;
-      }}
-      re= /^\d{10}$/;
-      if(!re.test(this.phone.value)) {
-        alert("Error: Enter valid 10 digit Phone No. without space!");
-        this.phone.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-      re= /^\d{10}$/;
-      if(this.alternative_phone.value != ""){
-      if(!re.test(this.alternative_phone.value)) {
-        alert("Error: Enter valid 10 digit Phone No. without space!");
-        this.alternative_phone.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }}
-      re= /^\d{6}$/;
-      if(!re.test(this.pincode.value)) {
-        alert("Error: Enter valid six digit pincode without space!");
-        this.pincode.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-      re= /^[0-9]{1,6}$/;
-      if(!re.test(this.rank.value)) {
-        alert("Error: Enter valid rank score in Entrance exam! Ex: B.Tech-JEE,MCA-NIMCET");
-        this.rank.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-      if(this.permanent_address.value == "") {
-        alert("Error: Permanent address cannot be blank!");
-        this.permanent_address.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-      if(this.corresponding_address.value == "") {
-        alert("Error: Corresponding address cannot be blank!");
-        this.corresponding_address.focus();
-        e.preventDefault(); // equivalent to return false
-        return;
-      }
-    };
-
-   var myForm = document.getElementById("myForm");
-    myForm.addEventListener("submit", checkForm, true);
-
-    // HTML5 form validation
-
-   /*var supports_input_validity = function()
-    {
-      var i = document.createElement("input");
-      return "setCustomValidity" in i;
-    }
-
-    if(supports_input_validity()) {
-      //var nameInput = document.getElementById("field_name");
-      //nameInput.setCustomValidity(nameInput.title);
-
-      var registrationInput = document.getElementById("field_registration_no");
-      registrationInput.setCustomValidity(registrationInput.title);
-
-      var rollInput = document.getElementById("field_roll_no");
-      rollInput.setCustomValidity(rollInput.title);
-
-      var branchInput = document.getElementById("field_branch");
-      branchInput.setCustomValidity(branchInput.title);
-      
-      var rankInput = document.getElementById("field_rank");
-      rankInput.setCustomValidity(rankInput.title);
-
-      var dobInput = document.getElementById("field_dob");
-      dobInput.setCustomValidity(dobInput.title);
-
-      var fatherInput = document.getElementById("field_father");
-      fatherInput.setCustomValidity(fatherInput.title);
-
-      var motherInput = document.getElementById("field_mother");
-      motherInput.setCustomValidity(motherInput.title);
-
-      var emailInput = document.getElementById("field_email");
-      emailInput.setCustomValidity(emailInput.title);
-
-      var permanentInput = document.getElementById("field_Permanent_Address");
-      permanentInput.setCustomValidity(permanentInput.title);
-
-      var correspondingInput = document.getElementById("field_Corresponding_address");
-      correspondingInput.setCustomValidity(correspondingInput.title);
-
-      var pinInput = document.getElementById("field_pincode");
-      pinInput.setCustomValidity(pinInput.title);
-
-      var phoneInput = document.getElementById("field_phone");
-      phoneInput.setCustomValidity(phoneInput.title);
-
-      // input key handlers
-
-      nameInput.addEventListener("keyup", function(e) {
-      nameInput.setCustomValidity(this.validity.patternMismatch ? nameInput.title : "");
-     }, false);
-
-      registrationInput.addEventListener("keyup", function(e) {
-      registrationInput.setCustomValidity(this.validity.patternMismatch ? registrationInput.title : "");
-     }, false);
-
-     rollInput.addEventListener("keyup", function(e) {
-      rollInput.setCustomValidity(this.validity.patternMismatch ? rollInput.title : "");
-     }, false);
-
-     branchInput.addEventListener("keyup", function(e) {
-      branchInput.setCustomValidity(this.validity.patternMismatch ? branchInput.title : "");
-     }, false);
-
-     rankInput.addEventListener("keyup", function(e) {
-      rankInput.setCustomValidity(this.validity.patternMismatch ? rankInput.title : "");
-     }, false);
-
-      dobInput.addEventListener("keyup", function(e) {
-      dobInput.setCustomValidity(this.validity.patternMismatch ? dobInput.title : "");
-     }, false);
-
-      fatherInput.addEventListener("keyup", function(e) {
-      fatherInput.setCustomValidity(this.validity.patternMismatch ? fatherInput.title : "");
-     }, false);
-
-     motherInput.addEventListener("keyup", function(e) {
-      motherInput.setCustomValidity(this.validity.patternMismatch ? motherInput.title : "");
-     }, false);
-
-      emailInput.addEventListener("keyup", function(e) {
-        emailInput.setCustomValidity(this.validity.patternMismatch ? emailInput.title : "");
-      }, false);
-
-      permanentInput.addEventListener("keyup", function(e) {
-        permanentInput.setCustomValidity(this.validity.patternMismatch ? permanentInput.title : "");
-      }, false);
-
-      correspondingInput.addEventListener("keyup", function(e) {
-      correspondingInput.setCustomValidity(this.validity.patternMismatch ? correspondingInput.title : "");
-      }, false);
-
-      pinInput.addEventListener("keyup", function(e) {
-      pinInput.setCustomValidity(this.validity.patternMismatch ? pinInput.title : "");
-      }, false);
-       
-      phoneInput.addEventListener("keyup", function(e) {
-      phoneInput.setCustomValidity(this.validity.patternMismatch ? phoneInput.title : "");
-      }, false);
-
-    }*/
-
-  }, false);
-
-</script>
-
-
 </body>
 </html>
