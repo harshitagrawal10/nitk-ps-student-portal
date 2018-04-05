@@ -325,21 +325,21 @@ Components
                    <a href="#step-9" type="button" class="btn btn-primary btn-circle" style="color:black;" ><i class="fa fa-mortar-board"></i></a>
                 </div>
                 <div class="steps-step">
-                    <a href="#step-10" type="button" class="btn btn-circle  btn-default" style="color:black;" disabled="disabled"><i class="fa fa-briefcase"></i></a>
+                    <a href="#step-10" type="button" class="btn btn-circle  btn-default" style="color:black;"><i class="fa fa-briefcase"></i></a>
                 </div>
                 <div class="steps-step">
-                    <a href="#step-11" type="button" class="btn btn-circle btn-default" disabled="disabled" style="color:black;" ><i class="fa fa-cog"></i></a>
+                    <a href="#step-11" type="button" class="btn btn-circle btn-default" style="color:black;" ><i class="fa fa-cog"></i></a>
                 </div>
                 <div class="steps-step">
-                    <a href="#step-12" type="button" class="btn btn-default btn-circle" disabled="disabled" style="color:black;" ><i class="fa fa-trophy"></i></a>
+                    <a href="#step-12" type="button" class="btn btn-default btn-circle" style="color:black;" ><i class="fa fa-trophy"></i></a>
                     <p></p>
                 </div>
                 <div class="steps-step">
-                    <a href="#step-13" type="button" class="btn btn-default btn-circle" disabled="disabled" style="color:black;" ><i class="fa fa-gamepad"></i></a>
+                    <a href="#step-13" type="button" class="btn btn-default btn-circle" style="color:black;" ><i class="fa fa-gamepad"></i></a>
                     <p></p>
                 </div>
                 <div class="steps-step">
-                    <a href="#step-14" type="button" class="btn btn-default btn-circle" disabled="disabled" style="color:black;" ><i class="fa fa-anchor"></i></a>
+                    <a href="#step-14" type="button" class="btn btn-default btn-circle" style="color:black;" ><i class="fa fa-anchor"></i></a>
                     <p></p>
                 </div>
             </div>
@@ -555,34 +555,34 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>College*</b></label>
-<input type="text" class="form-control" id="" placeholder="College Name">
+<label for=""><b>College*</b></label>
+<input type="text" class="form-control" id="" placeholder="College Name" pattern="[a-zA-Z ]+" title="Ex:NITK" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Start Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="Start Year">
+<label for=""><b>Start Year*</b></label>
+<input type="text" class="form-control" id="" placeholder="Start Year" pattern="\d{4}" title="Ex-2017" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>End Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="End Year">
+<label for=""><b>End Year*</b></label>
+<input type="text" class="form-control" id="" placeholder="End Year" pattern="\d{4}" title="Ex-2017" required>
 </div>
 </div>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Degree*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:B.Sc(Hons.)">
+<label for=""><b>Degree*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:B.Sc(Hons.)" pattern="[a-zA-Z ]+" title="Ex:B.Sc(Hons.)" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Stream</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:Economics">
+<label for=""><b>Stream</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:Economics" pattern="[a-zA-Z ]+" title="Ex:Economics" required>
 </div>
 </div>
 </div>
@@ -590,26 +590,27 @@ Copyright © National Institute of Technology
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance Scale:*</b></label>
-<select class="form-control">
-<option>Percentage</option>
-<option>CGPA</option>
+<label for=""><b>Performance Scale:*</b></label>
+<select class="form-control" id="gra">
+<option value="0">Select</option>
+<option value="Percentage">Percentage</option>
+<option value="CGPA">CGPA</option>
 </select>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance*</b></label>
-<input type="text" class="form-control" id="" placeholder="0.00">
+<label for=""><b>Performance*</b></label>
+<input type="text" class="form-control" id="" placeholder="0.00" pattern="^\d+(\.\d{1,2})?$" title="Number Only" required>
 </div>
 </div>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" id="grabut" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -624,40 +625,41 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>School*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:Delhi Public School">
+<label for=""><b>School*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:Delhi Public School" pattern="[a-zA-Z ]+" title="Ex:Delhi Public School" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Board*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:CBSE">
+<label for=""><b>Board*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:CBSE" pattern="[a-zA-Z ]+" title="Ex:CBSE" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Year Of Completion*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Year">
+<label for=""><b>Year Of Completion*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Year" pattern="\d{4}" title="Ex-2017" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance Scale:*</b></label>
-<select class="form-control">
-<option>Percentage</option>
-<option>CGPA</option>
+<label for=""><b>Performance Scale:*</b></label>
+<select class="form-control" id="sch">
+<option value="0">Select</option>
+<option value="Percentage">Percentage</option>
+<option value="CGPA">CGPA</option>
 </select>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance*</b></label>
-<input type="text" class="form-control" id="" placeholder="0.00">
+<label for=""><b>Performance*</b></label>
+<input type="text" class="form-control" id="" placeholder="0.00" pattern="^\d+(\.\d{1,2})?$" title="Number Only" required>
 </div>
 </div>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" id="schbut" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -674,49 +676,50 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>School*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:Delhi Public School">
+<label for=""><b>School*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:Delhi Public School" pattern="[a-zA-Z ]+" title="Ex:Delhi Public School" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Board*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:CBSE">
+<label for=""><b>Board*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:CBSE" pattern="[a-zA-Z ]+" title="Ex:CBSE" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Year Of Completion*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Year">
+<label for=""><b>Year Of Completion*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Year" pattern="\d{4}" title="Ex-2017" required>
 </div>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Stream:*</b></label>
-<select class="form-control">
-<option>Choose Stream</option>
-<option>Science</option>
-<option>Commerce</option>
-<option>Arts</option>
+<label for=""><b>Stream:*</b></label>
+<select class="form-control" id="int1">
+<option value="0">Choose Stream</option>
+<option value="Science">Science</option>
+<option value="Commerce">Commerce</option>
+<option value="Arts">Arts</option>
 </select>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance Scale:*</b></label>
-<select class="form-control">
-<option>Percentage</option>
-<option>CGPA</option>
+<label for=""><b>Performance Scale:*</b></label>
+<select class="form-control" id="int2">
+<option value="0">Select</option>
+<option value="Percentage">Percentage</option>
+<option value="CGPA">CGPA</option>
 </select>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance*</b></label>
-<input type="text" class="form-control" id="" placeholder="0.00">
+<label for=""><b>Performance*</b></label>
+<input type="text" class="form-control" id="" placeholder="0.00" pattern="^\d+(\.\d{1,2})?$" title="Number Only" required>
 </div>
 </div>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" id="intbut" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -733,54 +736,55 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>College*</b></label>
-<input type="text" class="form-control" id="" placeholder="College Name">
+<label for=""><b>College*</b></label>
+<input type="text" class="form-control" id="" placeholder="College Name" pattern="[a-zA-Z ]+" title="Ex:NITK" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Start Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="Start Year">
+<label for=""><b>Start Year*</b></label>
+<input type="text" class="form-control" id="" placeholder="Start Year" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>End Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="End Year">
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-6">
-<div class="form-group">
-<label for="exampleInputPassword1"><b>Stream</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:Economics">
+<label for=""><b>End Year*</b></label>
+<input type="text" class="form-control" id="" placeholder="End Year" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance Scale:*</b></label>
-<select class="form-control">
-<option>Percentage</option>
-<option>CGPA</option>
+<label for=""><b>Stream</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex:Economics" pattern="[a-zA-Z ]+" title="Ex:Chemistry" required>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="form-group">
+<label for=""><b>Performance Scale:*</b></label>
+<select class="form-control" id="dip">
+<option value="0">Select</option>
+<option value="Percentage">Percentage</option>
+<option value="CGPA">CGPA</option>
 </select>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance*</b></label>
-<input type="text" class="form-control" id="" placeholder="0.00">
+<label for=""><b>Performance*</b></label>
+<input type="text" class="form-control" id="" placeholder="0.00" pattern="^\d+(\.\d{1,2})?$" title="Number Only" required>
 </div>
 </div>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" id="dipbut" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -797,20 +801,20 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>College*</b></label>
-<input type="text" class="form-control" id="" placeholder="College Name" pattern="[a-zA-Z ]+" title="Enter Valid College Name" required>
+<label for=""><b>College*</b></label>
+<input type="text" class="form-control" id="" placeholder="College Name" pattern="[a-zA-Z ]+" title="Ex:NITK" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Start Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="Start Year" pattern="\d{4}" title="Enter Valid Year" required>
+<input type="text" class="form-control" id="" placeholder="Start Year" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>End Year*</b></label>
-<input type="text" class="form-control" id="" placeholder="End Year" pattern="\d{4}" title="Enter Valid Year" required>
+<input type="text" class="form-control" id="" placeholder="End Year" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 </div>
@@ -818,13 +822,13 @@ Copyright © National Institute of Technology
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Degree*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:M.Sc(Hons.)" pattern="[a-zA-Z ]+" title="Enter Valid Degree Name" required>
+<input type="text" class="form-control" id="" placeholder="Ex:M.Sc(Hons.)" pattern="[a-zA-Z ]+" title="Ex:M.Sc(Hons.)" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Stream</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex:Chemistry" pattern="[a-zA-Z ]+" title="Enter Valid Stream Name" required>
+<input type="text" class="form-control" id="" placeholder="Ex:Chemistry" pattern="[a-zA-Z ]+" title="Ex:Chemistry" required>
 </div>
 </div>
 </div>
@@ -832,7 +836,7 @@ Copyright © National Institute of Technology
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Performance Scale:*</b></label>
+<label for=""><b>Performance Scale:*</b></label>
 <select class="form-control" id="pgra">
 <option value="0">Select</option>
 <option>Percentage</option>
@@ -843,16 +847,16 @@ Copyright © National Institute of Technology
 <div class="col-lg-6">
 <div class="form-group">
 <label for="exampleInputPassword1"><b>Performance*</b></label>
-<input type="text" class="form-control" id="" placeholder="0.00" pattern="\d{4}" title="Enter Valid Year" required>
+<input type="text" class="form-control" id="" placeholder="0.00" pattern="^\d+(\.\d{1,2})?$" title="Number Only" required>
 </div>
 </div>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary" id="pgrabut"><b>Save changes</b></button>
+<button type="submit" class="btn btn-primary" id="pgrabut"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -868,23 +872,23 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Title:*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: Optical Character Recognition">
+<label for=""><b>Title:*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: Optical Character Recognition" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Description:*</b></label>
- <textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" placeholder="Short description about project (Max 250 char))"></textarea>
+<label for=""><b>Description:*</b></label>
+ <textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" placeholder="Short description about project (Max 250 char))" required></textarea>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Project Link:*</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: http://myprojectlink.com">
+<label for=""><b>Project Link:*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: http://myprojectlink.com" required>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -901,41 +905,41 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Profile*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: software development engineer">
+<label for=""><b>Profile*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: software development engineer" pattern="[a-zA-Z ]+" title="Ex: software development engineer" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Organization*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: Amazon">
+<label for=""><b>Organization*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: Amazon" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Location*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: Bangalore">
+<label for=""><b>Location*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: Bangalore" pattern="[a-zA-Z ]+" title="Ex: Bangalore" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Start Date*</b></label>
-<input type="text" class="form-control" id="" placeholder="Enter Date">
+<label for=""><b>Start Date*</b></label>
+<input type="text" class="form-control" id="" placeholder="Enter Date" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>End Date*</b></label>
-<input type="text" class="form-control" id="" placeholder="Enter Date">
+<label for=""><b>End Date*</b></label>
+<input type="text" class="form-control" id="" placeholder="Enter Date" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Description:*</b></label>
- <textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" placeholder="Short description of work done (Max 250 char))"></textarea>
+<label for=""><b>Description:*</b></label>
+ <textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" placeholder="Short description of work done (Max 250 char))" required></textarea>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -951,41 +955,41 @@ Copyright © National Institute of Technology
 <div class="modal-body">
 <form role="form">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Profile*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: software development engineer">
+<label for=""><b>Profile*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: software development engineer" pattern="[a-zA-Z ]+" title="Ex: software development engineer" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Organization*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: Amazon">
+<label for=""><b>Organization*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: Amazon" required>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Location*:</b></label>
-<input type="text" class="form-control" id="" placeholder="Ex: Bangalore">
+<label for=""><b>Location*:</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex: Bangalore" pattern="[a-zA-Z ]+" title="Ex: Bangalore" required>
 </div>
 <div class="row">
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Start Date*</b></label>
-<input type="text" class="form-control" id="" placeholder="Enter Date">
+<label for=""><b>Start Date*</b></label>
+<input type="text" class="form-control" id="" placeholder="Enter Date" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 <div class="col-lg-6">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>End Date*</b></label>
-<input type="text" class="form-control" id="" placeholder="Enter Date">
+<label for=""><b>End Date*</b></label>
+<input type="text" class="form-control" id="" placeholder="Enter Date" pattern="\d{4}" title="Ex:2017" required>
 </div>
 </div>
 </div>
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Description:*</b></label>
- <textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" placeholder="Short description of work done (Max 250 char))"></textarea>
+<label for=""><b>Description:*</b></label>
+ <textarea class="form-control" id="field_Permanent_Address" name="permanent_address" rows="2" placeholder="Short description of work done (Max 250 char))" required></textarea>
 </div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -1001,27 +1005,34 @@ Copyright © National Institute of Technology
 </div>
 <div class="modal-body">
 <form role="form">
+<div class="row">
+<div class="col-lg-3">
 <div class="form-group">
-<label for="exampleInputEmail1"><b>Course*</b></label>
+<label for=""><b>Course*</b></label>
 <input type="text" class="form-control" id="" placeholder="Ex-M Tech" disabled>
 </div>
+</div>
+<div class="col-lg-4">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Branch*</b></label>
+<label for=""><b>Branch*</b></label>
 <input type="text" class="form-control" id="" placeholder="Ex-Civil" disabled>
 </div>
+</div>
+<div class="col-lg-5">
 <div class="form-group">
-<label for="exampleInputPassword1"><b>Specialization*</b></label>
+<label for=""><b>Specialization*</b></label>
 <input type="text" class="form-control" id="" placeholder="Ex-STRUCTURAL ENGG." disabled>
 </div>
+</div>
+</div>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>CGPA*</b></label>
-<input type="text" class="form-control" id="" placeholder="CGPA">
+<label for=""><b>CGPA*</b></label>
+<input type="text" class="form-control" id="" placeholder="CGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only" required>
 </div>
 <div class="form-group">
 <label for=""><b>Current Semester:*</b></label>
 <select class="form-control" id="sel_sem">
 <option value="0" >Select</option>
-<option value="1" >1</option>
 <option value="2" >2</option>
 <option value="3" >3</option>
 <option value="4" >4</option>
@@ -1037,61 +1048,61 @@ Copyright © National Institute of Technology
 <div class="col-lg-3" id="sem1" hidden>
 <div class="form-group">
 <label for="exampleInputPassword1"><b>1<sup>st</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<input type="text" class="form-control" id="sem11" placeholder="SGPA"   pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 <div class="col-lg-3" id="sem2" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>2<sup>nd</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>2<sup>nd</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem22" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 <div class="col-lg-3" id="sem3" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>3<sup>rd</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>3<sup>rd</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem33" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 <div class="col-lg-3" id="sem4" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>4<sup>th</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>4<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem44" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 </div>
 <div class="row">
 <div class="col-lg-3" id="sem5" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>5<sup>th</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>5<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem55" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 <div class="col-lg-3" id="sem6" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>6<sup>th</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>6<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem66" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 <div class="col-lg-3" id="sem7" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>7<sup>th</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>7<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem77" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 <div class="col-lg-3" id="sem8" hidden>
 <div class="form-group">
-<label for="exampleInputPassword1"><b>8<sup>th</sup> semester*</b></label>
-<input type="text" class="form-control" id="" placeholder="SGPA">
+<label for=""><b>8<sup>th</sup> semester*</b></label>
+<input type="text" class="form-control" id="sem88" placeholder="SGPA" pattern="^\d+(\.\d{1,2})?$" title="Number Only">
 </div>
 </div>
 </div>
 <div>
-</form>
 </div>
 <div class="modal-footer">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+<button type="submit" id="curbut" class="btn btn-primary"><b>Save changes</b></button>
 </div>
+</form>
 </div> 
 </div> 
 </div> 
@@ -1136,7 +1147,7 @@ Copyright © National Institute of Technology
     $('#content-wrapper').css('min-height' ,$(window).height()+'px');
     });
 
-     /* $(document).ready(function(){
+     $(document).ready(function(){
     $(function () {
         $("#pgrabut").click(function () {
             var pgrad = $("#pgra").val();
@@ -1148,30 +1159,96 @@ Copyright © National Institute of Technology
             return true;
         });
     });
-    });*/
+    });
+
+     $(document).ready(function(){
+    $(function () {
+        $("#grabut").click(function () {
+            var grad = $("#gra").val();
+            if (grad == "0" ) {
+                alert("Select Performance Scale.");
+                $("#gra").focus();
+                return false;
+            }
+            return true;
+        });
+    });
+    });
+
+    $(document).ready(function(){
+    $(function () {
+        $("#schbut").click(function () {
+            var grad = $("#sch").val();
+            if (grad == "0" ) {
+                alert("Select Performance Scale.");
+                $("#sch").focus();
+                return false;
+            }
+            return true;
+        });
+    });
+    });
+
+    $(document).ready(function(){
+    $(function () {
+        $("#intbut").click(function () {
+            var grad = $("#int2").val();
+             var str = $("#int1").val();
+            if (grad == "0" ) {
+                alert("Select Performance Scale.");
+                $("#sch").focus();
+                return false;
+            }
+             if (str == "0" ) {
+                alert("Select Stream.");
+                $("#sch").focus();
+                return false;
+            }
+            return true;
+        });
+    });
+    });
+
+    $(document).ready(function(){
+    $(function () {
+        $("#dipbut").click(function () {
+            var grad = $("#dip").val();
+            if (grad == "0" ) {
+                alert("Select Performance Scale.");
+                $("#dip").focus();
+                return false;
+            }
+            return true;
+        });
+    });
+    });
+
+    $(document).ready(function(){
+    $(function () {
+        $("#curbut").click(function () {
+            var sem = $("#sel_sem").val();
+            if (sem == "0" ) {
+                alert("Select Current Semester.");
+                $("#sel_sem").focus();
+                return false;
+            }
+            return true;
+        });
+    });
+    });
+
 
      $("#sel_sem").click(function(){
       if($("#sel_sem").val()=="0")
       {
           $("#sgpa").hide();
       }else
-      if($("#sel_sem").val()=="1")
-      {
-          $("#sgpa").show();
-          $("#sem1").show();
-          $("#sem2").hide();
-          $("#sem3").hide();
-          $("#sem4").hide();
-          $("#sem5").hide();
-          $("#sem6").hide();
-          $("#sem7").hide();
-          $("#sem8").hide();
-      }else
       if($("#sel_sem").val()=="2")
       {
           $("#sgpa").show();
           $("#sem1").show();
-          $("#sem2").show();
+          $("#sem11").attr("required", "true");
+          $("#sem2").hide();
           $("#sem3").hide();
           $("#sem4").hide();
           $("#sem5").hide();
@@ -1183,8 +1260,10 @@ Copyright © National Institute of Technology
       {
           $("#sgpa").show();
           $("#sem1").show();
+          $("#sem11").attr("required", "true");
           $("#sem2").show();
-          $("#sem3").show();
+          $("#sem22").attr("required", "true");
+          $("#sem3").hide();
           $("#sem4").hide();
           $("#sem5").hide();
           $("#sem6").hide();
@@ -1197,7 +1276,10 @@ Copyright © National Institute of Technology
           $("#sem1").show();
           $("#sem2").show();
           $("#sem3").show();
-          $("#sem4").show();
+          $("#sem11").attr("required", "true");
+          $("#sem22").attr("required", "true");
+          $("#sem33").attr("required", "true");
+          $("#sem4").hide();
           $("#sem5").hide();
           $("#sem6").hide();
           $("#sem7").hide();
@@ -1210,7 +1292,11 @@ Copyright © National Institute of Technology
           $("#sem2").show();
           $("#sem3").show();
           $("#sem4").show();
-          $("#sem5").show();
+          $("#sem11").attr("required", "true");
+          $("#sem22").attr("required", "true");
+          $("#sem33").attr("required", "true");
+          $("#sem44").attr("required", "true");
+          $("#sem5").hide();
           $("#sem6").hide();
           $("#sem7").hide();
           $("#sem8").hide();
@@ -1223,7 +1309,12 @@ Copyright © National Institute of Technology
           $("#sem3").show();
           $("#sem4").show();
           $("#sem5").show();
-          $("#sem6").show();
+          $("#sem11").attr("required", "true");
+          $("#sem22").attr("required", "true");
+          $("#sem33").attr("required", "true");
+          $("#sem44").attr("required", "true");
+          $("#sem55").attr("required", "true");
+          $("#sem6").hide();
           $("#sem7").hide();
           $("#sem8").hide();
       }else
@@ -1236,7 +1327,13 @@ Copyright © National Institute of Technology
           $("#sem4").show();
           $("#sem5").show();
           $("#sem6").show();
-          $("#sem7").show();
+          $("#sem11").attr("required", "true");
+          $("#sem22").attr("required", "true");
+          $("#sem33").attr("required", "true");
+          $("#sem44").attr("required", "true");
+          $("#sem55").attr("required", "true");
+          $("#sem66").attr("required", "true");
+          $("#sem7").hide();
           $("#sem8").hide();
       }else
       if($("#sel_sem").val()=="8")
@@ -1249,7 +1346,14 @@ Copyright © National Institute of Technology
           $("#sem5").show();
           $("#sem6").show();
           $("#sem7").show();
-          $("#sem8").show();
+          $("#sem11").attr("required", "true");
+          $("#sem22").attr("required", "true");
+          $("#sem33").attr("required", "true");
+          $("#sem44").attr("required", "true");
+          $("#sem55").attr("required", "true");
+          $("#sem66").attr("required", "true");
+          $("#sem77").attr("required", "true");
+          $("#sem8").hide();
       }
   });
 </script>
