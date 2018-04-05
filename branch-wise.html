@@ -29,7 +29,8 @@
 	<![endif]-->
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
-    <style>
+<link rel="stylesheet" type="text/css" href="css/compiled/d3graph.css"/>
+<style>
 .theadd
 {
   background-color:#2c3e50;
@@ -295,19 +296,16 @@ Components
 <h2>Placement Statistics</h2>
 </header>
 <div class="main-box-body clearfix">
-<div id="main">
-      <div id="sequence"></div>
+      <div id="sequence">
+      
+      </div>
+
       <div id="chart">
         <div id="explanation" style="visibility: hidden;">
           <span id="percentage"></span><br/>
-          of visits begin with this sequence of pages
+          Placed
         </div>
-      </div>
-    </div>
-    <div id="sidebar">
-      <input type="checkbox" id="togglelegend"> Legend<br/>
-      <div id="legend" style="visibility: hidden;"></div>
-    </div>
+      </div>  
 </div>
 </div>
 </div>
@@ -320,7 +318,7 @@ Components
 <form class="form-inline" role="form">
 <div class="form-group form-group-select2">
 <lable>Branch:&nbsp;</lable>
-		<select style="width:250px" id="sel1">
+		<select style="width:230px" id="sel1">
       <option value="0" selected="selected">Select</option>
 			<option value="MCA">MCA</option>
 			<option value="B Tech">B Tech</option>
@@ -676,7 +674,7 @@ Copyright © National Institute of Technology
 <script src="js/pace.min.js"></script>
 
 <script src="js/image.js"></script>
-
+<script src="js/sequences.js"></script>
 <script>
   
    $(document).ready(function(){

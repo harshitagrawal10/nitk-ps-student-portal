@@ -1,0 +1,176 @@
+#sidebar {
+  float: right;
+  width: 100px;
+}
+@media only screen and (max-width: 300px)
+{
+
+#sequence {
+  width: 250px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  font-size:8px;
+  fill: #fff;
+}
+
+
+#explanation {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+}
+
+#percentage {
+  font-size: 2em;
+}
+}
+
+@media only screen and (max-width: 400px) and (min-width: 300px)
+{
+
+#sequence {
+  width: 280px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  font-size:12px;
+  fill: #fff;
+}
+
+
+#explanation {
+  position: absolute;
+  top: 45px;
+  left: 55px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+}
+
+#percentage {
+  font-size: 2.2em;
+}
+}
+
+@media only screen and (max-width: 500px) and (min-width: 400px)
+{
+
+#sequence {
+  width: 390px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  font-size:13px;
+  fill: #fff;
+}
+
+
+#explanation {
+  position: absolute;
+  top: 75px;
+  left: 90px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+}
+
+@media only screen and (max-width: 800px) and (min-width: 500px)
+{
+
+#sequence {
+  width: 480px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  font-size:13px;
+  fill: #fff;
+}
+
+
+#explanation {
+  position: absolute;
+  top: 145px;
+  left: 158px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 800px)
+{
+
+#sequence {
+  width: 480px;
+  height: 70px;
+}
+
+#legend {
+  padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+  font-weight: 600;
+  font-size:13px;
+  fill: #fff;
+}
+
+
+#explanation {
+  position: absolute;
+  top: 145px;
+  left: 158px;
+  width: 140px;
+  text-align: center;
+  color: #666;
+}
+
+#percentage {
+  font-size: 2.5em;
+}
+}
+
+#chart {
+  position: relative;
+}
+
+#chart path {
+  stroke: #fff;
+}
