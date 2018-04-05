@@ -317,8 +317,10 @@ Components
 	</div>
 
     <div class="form-group form-group-select2">
+    <div class="row">
+    <div class="col-lg-4">
 		<h5><b>Programme*</b></h5>
-		<select style="width:300px" name="programme" required>
+		<select style="width:200px" name="programme" id="field_programme" required>
 		    <option value="0">Select</option>
 			<option value="MCA">MCA</option>
 			<option value="B Tech">B Tech</option>
@@ -329,10 +331,33 @@ Components
 			<option value="M Tech.(Research)">M Tech.(Research)</option>
 		</select>
 	</div>
-
-	<div class="form-group">
-		<h5 for=""><b>Branch*</b></h5>
-		<input type='text' class="form-control" placeholder="Enter Branch" id="field_branch" name="branch" title="Branch name must contain only letters" pattern="[a-zA-Z ]+" required/>
+	    <div class="col-lg-4" id="field_branch" hidden>
+		<h5><b>Programme*</b></h5>
+		<select style="width:200px" name="programme" id="field_programme" required>
+		    <option value="0">Select</option>
+			<option value="MCA">MCA</option>
+			<option value="B Tech">B Tech</option>
+			<option value="M Tech">M Tech</option>
+			<option value="Phd">Phd</option>
+			<option value="MBA">MBA</option>
+			<option value="M Sc.">M Sc.</option>
+			<option value="M Tech.(Research)">M Tech.(Research)</option>
+		</select>
+	</div>
+	    <div class="col-lg-4" id="field_subbranch" hidden>
+		<h5><b>Programme*</b></h5>
+		<select style="width:200px" name="programme" id="field_programme" required>
+		    <option value="0">Select</option>
+			<option value="MCA">MCA</option>
+			<option value="B Tech">B Tech</option>
+			<option value="M Tech">M Tech</option>
+			<option value="Phd">Phd</option>
+			<option value="MBA">MBA</option>
+			<option value="M Sc.">M Sc.</option>
+			<option value="M Tech.(Research)">M Tech.(Research)</option>
+		</select>
+	</div>
+	</div>
 	</div>
 
 	<div class="form-group">
@@ -342,7 +367,7 @@ Components
 	
 	<div class="form-group">
 		<h5 for=""><b>Date Of Birth*</b></h5>
-		<input type='date' id="field_date" class="form-control" placeholder="DD/MM/YYYY" id="field_dob" name="dob" title="DD/MM/YYYY" required/>
+		<input type='date' id="field_date" class="form-control" placeholder="DD/MM/YYYY" id="field_dob" name="dob" title="DD/MM/YYYY" value="2013-01-08" required/>
 	</div>
 	<div class="form-group">
 		<h5 for=""><b>Father's Name*</b></h5>
@@ -737,6 +762,25 @@ Copyright © National Institute of Technology
      $(document).ready(function(){
     $('#content-wrapper').css('min-height',$(window).height()+'px');
 });
+    
+    $("#field_programme").click(function(){
+    if($("#field_programme").val()=="B Tech" || $("#field_programme").val()=="M Tech")
+      {
+          $("#field_branch").show();
+      }else
+      {
+      	$("#field_branch").hide();
+      }});
+
+      $("#field_programme").click(function(){
+      if($("#field_programme").val()=="M Tech")
+      {
+          $("#field_subbranch").show();
+      }else
+      {
+      	$("#field_subbranch").hide();
+      }
+  });
     
 </script>
 
