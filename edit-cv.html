@@ -363,8 +363,12 @@ Components
                         <label for="yourAddress" data-error="wrong" data-success="right">Address</label>
                         <textarea id="yourAddress" type="text" required="required" rows="2" class="md-textarea validate form-control"></textarea>
                     </div>-->
+
                     <h3 class="font-weight-bold pl-0 my-4" style="text-align:center;"><strong>Education</strong></h3>
-                   <div >
+                    <div >
+                    <a data-toggle="modal" href="#current" class="btn btn-primary btn-lg" style="width:100%;text-align:left;">Current Course</a>
+                    </div>
+                   <div style="padding-top:5px;">
                     <a data-toggle="modal" href="#X" class="btn btn-primary btn-lg" style="width:100%;text-align:left;">X (Secondary)</a>
                     </div>
                     <div style="padding-top:5px;">
@@ -539,6 +543,55 @@ Copyright © National Institute of Technology
 </div>
 </div>
 
+ 
+<div class="modal fade" id="current" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header btn-primary">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" style="text-align:center;color:#fff;"><b>Current Course Details</b></h4>
+</div>
+<div class="modal-body">
+<form role="form">
+<div class="form-group">
+<label for="exampleInputEmail1"><b>Course*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex-M Tech" disabled>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>Branch*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex-Civil" disabled>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>Specialization*</b></label>
+<input type="text" class="form-control" id="" placeholder="Ex-STRUCTURAL ENGG." disabled>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1"><b>CGPA*</b></label>
+<input type="text" class="form-control" id="" placeholder="CGPA">
+</div>
+<div class="form-group">
+<label for=""><b>Current Semester:*</b></label>
+<select class="form-control">
+<option value="0" >Select</option>
+<option value="1" >1</option>
+<option value="2" >2</option>
+<option value="3" >3</option>
+<option value="4" >4</option>
+<option value="5" >5</option>
+<option value="6" >6</option>
+<option value="7" >7</option>
+<option value="8" >8</option>
+</select>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary"><b>Save changes</b></button>
+</div>
+</div> 
+</div> 
+</div> 
 
  
 <div class="modal fade" id="Graduation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
