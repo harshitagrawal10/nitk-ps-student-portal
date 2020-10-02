@@ -1,2 +1,2 @@
 # nitk-ps-student-portal
-nitk placement website
+nitk placement- an amazing website!
